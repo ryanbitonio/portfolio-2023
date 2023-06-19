@@ -1,6 +1,20 @@
 import { extendTheme } from "@chakra-ui/react";
+import { listTheme as List } from "./components/listStyles";
 
 const theme = extendTheme({
+  styles: {
+    global: {
+      body: {
+        bg: "gray.900",
+      },
+      a: {
+        color: "teal.500",
+        _hover: {
+          textDecoration: "none",
+        },
+      },
+    },
+  },
   colors: {
     gray: {
       100: "#FFFFFF",
@@ -32,6 +46,9 @@ const theme = extendTheme({
     tight: "-5%",
     normal: "0",
     wide: "30%",
+  },
+  components: {
+    List,
   },
 });
 

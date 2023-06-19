@@ -19,7 +19,7 @@ function App() {
         lg: "460px 1fr",
       }}
     >
-      <GridItem area="nav" bg="purple">
+      <GridItem area="nav">
         <Nav />
       </GridItem>
       <GridItem area="hero" bg="gold">

@@ -5,24 +5,9 @@ import { ReactComponent as ConnectIcon } from "../assets/icons/Nav/connect.svg";
 
 const Nav = () => {
   return (
-    <List
-      display="flex"
-      flexDirection="column"
-      justifyContent="center"
-      fontWeight="semibold"
-      pl={25}
-      spacing={3}
-      color="gray.300"
-      h="100%"
-    >
+    <List spacing={3} h="100%">
       <ListItem fontSize="4xl">
-        <ListIcon
-          mr={5}
-          w="24px"
-          height="24px"
-          as={HomeIcon}
-          stroke="gray.300"
-        />
+        <ListIcon mr={5} w="24px" height="24px" as={HomeIcon} />
         Home
       </ListItem>
       <ListItem fontSize="4xl">
