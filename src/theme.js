@@ -3,29 +3,30 @@ import { extendTheme } from "@chakra-ui/react";
 const theme = extendTheme({
   colors: {
     gray: {
-      200: "#FFFFFF",
-      300: "#F5F5F5",
+      100: "#FFFFFF",
+      200: "#F5F5F5",
+      300: "#B3B3B3",
       400: "rgba(0, 0, 0, 0.65)",
-      500: "#252525",
-      600: "#4D4D4D",
+      500: "#4D4D4D",
+      600: "#252525",
       700: "#171717",
       800: "#121212",
-      900: "#0000",
+      900: "#000000",
     },
   },
   fontSizes: {
-    xs: "0.313rem",
-    sm: "0.438rem",
-    md: "0.5rem",
-    lg: "0.625rem",
-    xl: "0.75rem",
-    "2xl": "0.813rem",
-    "3xl": "0.938rem",
-    "4xl": "1.125rem",
-    "5xl": "1.563rem",
-    "6xl": "1.875rem",
-    "7xl": "2.5rem",
-    "8xl": "8rem",
+    xs: "0.313rem", // 5px
+    sm: "0.438rem", // 7px
+    md: "0.5rem", // 8px
+    lg: "0.625rem", // 10px
+    xl: "0.75rem", // 12px
+    "2xl": "0.813rem", // 13px
+    "3xl": "0.938rem", // 15px
+    "4xl": "1.125rem", //18px
+    "5xl": "1.563rem", //25px
+    "6xl": "1.875rem", //30px
+    "7xl": "2.5rem", // 40px
+    "8xl": "8rem", // 80px
   },
   letterSpacings: {
     tight: "-5%",
