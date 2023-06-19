@@ -28,6 +28,7 @@ const theme = extendTheme({
       900: "#000000",
     },
   },
+
   fontSizes: {
     xs: "0.313rem", // 5px
     sm: "0.438rem", // 7px
@@ -40,12 +41,12 @@ const theme = extendTheme({
     "5xl": "1.563rem", //25px
     "6xl": "1.875rem", //30px
     "7xl": "2.5rem", // 40px
-    "8xl": "8rem", // 80px
+    "8xl": "5rem", // 80px
   },
   letterSpacings: {
-    tight: "-5%",
+    tight: "-0.05em",
     normal: "0",
-    wide: "30%",
+    wide: "0.3em",
   },
   components: {
     List,

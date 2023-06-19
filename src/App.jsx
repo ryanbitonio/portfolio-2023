@@ -1,6 +1,7 @@
 import "./App.css";
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import Nav from "./components/Nav";
+import Hero from "./components/Hero";
 
 function App() {
   return (
@@ -22,8 +23,8 @@ function App() {
       <GridItem area="nav">
         <Nav />
       </GridItem>
-      <GridItem area="hero" bg="gold">
-        Hero
+      <GridItem area="hero">
+        <Hero />
       </GridItem>
       <Show above="lg">
         <GridItem area="aside" bg="dodgerblue">
