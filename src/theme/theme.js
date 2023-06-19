@@ -20,6 +20,12 @@ const theme = extendTheme({
     },
   },
   colors: {
+    gradient: {
+      primary:
+        "linear-gradient(180deg, rgba(113, 247, 206, 0.8) -7.68%, rgba(44, 85, 72, 0) 117.6%)",
+      secondary:
+        "linear-gradient(180deg, rgba(131, 131, 131, 0.8) -7.68%, rgba(44, 85, 72, 0) 117.6%)",
+    },
     gray: {
       100: "#FFFFFF",
       200: "#F5F5F5",
@@ -46,6 +52,7 @@ const theme = extendTheme({
     "6xl": "1.875rem", //30px
     "7xl": "2.5rem", // 40px
     "8xl": "5rem", // 80px
+    "9xl": "6rem", // 96px
   },
   letterSpacings: {
     tight: "-0.05em",

@@ -20,10 +20,13 @@ const Hero = () => {
         <Icon as={NextIcon} boxSize={34} />
       </HStack>
       <HStack pt={5}>
-        <Image src="src\assets\icons\Hero\hero.svg" />
+        <Image
+          filter="drop-shadow(0px 20px 85px rgba(0, 0, 0, 0.4))"
+          src="src\assets\icons\Hero\hero.svg"
+        />
         <Stack pl={5}>
           <Text fontWeight="bold">Profile</Text>
-          <Heading fontSize="8xl" letterSpacing="tight">
+          <Heading fontSize="9xl" letterSpacing="tight">
             Ryan Bitonio
           </Heading>
           <Social />

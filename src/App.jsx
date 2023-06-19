@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 function App() {
   return (
     <Grid
+      gap={1.5}
       h="100vh"
       templateAreas={{
         base: `"nav" "hero" "main" "footer"`,
@@ -20,21 +21,21 @@ function App() {
         lg: "460px 1fr",
       }}
     >
-      <GridItem area="nav">
+      <GridItem area="nav" bg="gray.800">
         <Nav />
       </GridItem>
-      <GridItem area="hero">
+      <GridItem marginBottom="-1.5" area="hero" bg="gradient.primary">
         <Hero />
       </GridItem>
       <Show above="lg">
-        <GridItem area="aside" bg="dodgerblue">
+        <GridItem area="aside" bg="gray.800">
           Aside
         </GridItem>
       </Show>
-      <GridItem area="main" bg="coral">
+      <GridItem area="main" bg="gray.800">
         Main
       </GridItem>
-      <GridItem area="footer" bg="green">
+      <GridItem area="footer" bg="gray.800">
         Footer
       </GridItem>
     </Grid>
