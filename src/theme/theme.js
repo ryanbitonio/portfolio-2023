@@ -21,10 +21,20 @@ const theme = extendTheme({
   },
   colors: {
     gradient: {
-      primary:
+      xl_primary:
         "linear-gradient(180deg, rgba(113, 247, 206, 0.8) -7.68%, rgba(44, 85, 72, 0) 117.6%)",
-      secondary:
+      xl_secondary:
         "linear-gradient(180deg, rgba(131, 131, 131, 0.8) -7.68%, rgba(44, 85, 72, 0) 117.6%)",
+      base_primary:
+        "linear-gradient(180deg, rgba(113, 247, 206, 0.8) -7.68%, rgba(44, 85, 72, 0) 101.68%)",
+      base_secondary:
+        "linear-gradient(180deg, rgba(131, 131, 131, 0.8) -7.68%, rgba(44, 85, 72, 0) 102.93%)",
+    },
+    breakpoints: {
+      sm: "320px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1440px",
     },
     gray: {
       100: "#FFFFFF",
@@ -38,7 +48,6 @@ const theme = extendTheme({
       900: "#000000",
     },
   },
-
   fontSizes: {
     xs: "0.313rem", // 5px
     sm: "0.438rem", // 7px
@@ -50,7 +59,7 @@ const theme = extendTheme({
     "4xl": "1.125rem", //18px
     "5xl": "1.563rem", //25px
     "6xl": "1.875rem", //30px
-    "7xl": "2.5rem", // 40px
+    "7xl": "3.5rem", // 56px
     "8xl": "5rem", // 80px
     "9xl": "6rem", // 96px
   },
