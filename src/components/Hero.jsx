@@ -20,11 +20,11 @@ const Hero = () => {
         <NavButtons />
       </Show>
       <Flex
+        gap={{ md: 0, base: 5 }}
         flex={1}
         direction={{ md: "row", base: "column" }}
         align={{ base: "center" }}
         justify={{ md: "flex-start", base: "center" }}
-        pt={{ md: 5, base: 0 }}
       >
         <Image
           boxSize={{ xl: "221", lg: "200", md: "170", base: "221" }}

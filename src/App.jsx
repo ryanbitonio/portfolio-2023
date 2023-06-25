@@ -39,7 +39,7 @@ function App() {
           Aside
         </GridItem>
       </Show>
-      <GridItem area="main" bg="gray.800">
+      <GridItem area="main" bg={{ base: "gray.900", md: "gray.800" }}>
         Main
       </GridItem>
       <GridItem area="footer" bg="gray.800">

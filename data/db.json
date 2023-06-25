@@ -1,0 +1,43 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "/family-tree",
+      "description": "a simple web application that utilizes crud operations.",
+      "background_image": "https://res.cloudinary.com/dyeritf60/image/upload/v1687596024/family-tree_qdicin.png",
+      "alt": "family tree",
+      "language": "TYPESCRIPT",
+      "stack": {
+        "javascript": "SiJavascript",
+        "react": "SiReact",
+        "chakra": "SiChakraui"
+      }
+    },
+    {
+      "id": 2,
+      "title": "/game-hub",
+      "description": "a clone of rawg.io, a video game discovery platform.",
+      "background_image": "https://res.cloudinary.com/dyeritf60/image/upload/v1687596135/game-hub_hfhfqz.png",
+      "alt": "game hub",
+      "language": "TYPESCRIPT",
+      "stack": {
+        "javascript": "SiJavascript",
+        "react": "SiReact",
+        "chakra": "SiChakraui"
+      }
+    },
+    {
+      "id": 3,
+      "title": "/portfolio",
+      "description": "my personal web portfolio.",
+      "background_image": "https://res.cloudinary.com/dyeritf60/image/upload/v1687596134/portfolio_bi9qlr.png",
+      "alt": "portfolio",
+      "language": "REACT",
+      "stack": {
+        "javascript": "SiJavascript",
+        "react": "SiReact",
+        "chakra": "SiChakraui"
+      }
+    }
+  ]
+}
