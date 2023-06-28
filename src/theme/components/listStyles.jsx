@@ -15,8 +15,9 @@ const sizes = {
       pl: 25,
       fontWeight: "semibold",
       color: "gray.300",
+      fontSize: "4xl",
     },
-    icon: { stroke: "gray.300", mr: 5 },
+    icon: { stroke: "gray.300", mr: 5, w: "24px", h: "24px" },
   }),
 };
 

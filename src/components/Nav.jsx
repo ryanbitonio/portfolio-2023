@@ -5,17 +5,17 @@ import { ReactComponent as ConnectIcon } from "../assets/icons/Nav/connect.svg";
 
 const Nav = () => {
   return (
-    <List size="lg" spacing={3} h="100%">
-      <ListItem fontSize="4xl">
-        <ListIcon w="24px" height="24px" as={HomeIcon} />
+    <List size="lg" spacing={3}>
+      <ListItem>
+        <ListIcon as={HomeIcon} />
         Home
       </ListItem>
-      <ListItem fontSize="4xl">
-        <ListIcon w="24px" height="24px" as={ExperienceIcon} />
+      <ListItem>
+        <ListIcon as={ExperienceIcon} />
         Experience
       </ListItem>
-      <ListItem fontSize="4xl">
-        <ListIcon w="22px" height="22px" as={ConnectIcon} />
+      <ListItem>
+        <ListIcon w="22px" h="22px" as={ConnectIcon} />
         Connect
       </ListItem>
     </List>
