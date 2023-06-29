@@ -35,12 +35,10 @@ const ProjectCard = ({
       }}
       borderRadius={10}
       w={249}
-      h={373}
-      // transform="scale(1)"
     >
       <CardBody>
         <Image m="auto" src={backgroundImage} alt={alt} borderRadius="lg" />
-        <Stack direction={"column"} mt="6">
+        <Stack mt="6">
           <Text fontSize="lg" letterSpacing="wide" fontWeight="bold">
             {language}
           </Text>

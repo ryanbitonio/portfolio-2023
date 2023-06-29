@@ -1,4 +1,4 @@
-import { List, ListItem, ListIcon } from "@chakra-ui/react";
+import { List, ListItem, ListIcon, Stack, Box } from "@chakra-ui/react";
 import { ReactComponent as HomeIcon } from "../assets/icons/Nav/home.svg";
 import { ReactComponent as ExperienceIcon } from "../assets/icons/Nav/experience.svg";
 import { ReactComponent as ConnectIcon } from "../assets/icons/Nav/connect.svg";

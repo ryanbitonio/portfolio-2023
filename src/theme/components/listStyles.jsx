@@ -6,11 +6,7 @@ const { definePartsStyle, defineMultiStyleConfig } =
 
 const sizes = {
   lg: definePartsStyle({
-    container: {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-    },
+    container: {},
     item: {
       pl: 25,
       fontWeight: "semibold",

@@ -18,7 +18,7 @@ function App() {
       }}
     >
       <Show above="md">
-        <GridItem py={6} area="nav" bg="gray.800">
+        <GridItem area="nav" bg="gray.800">
           <Nav />
         </GridItem>
       </Show>

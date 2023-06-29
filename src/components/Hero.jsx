@@ -15,33 +15,25 @@ import NavButtons from "./NavButtons";
 
 const Hero = () => {
   return (
-    <Stack h="100%" pl={{ base: "0", md: "25" }} pt={{ md: 8, base: 0 }}>
+    <Stack>
       <Show above="md">
         <NavButtons />
       </Show>
       <Flex
-        gap={{ md: 0, base: 5 }}
-        flex={1}
-        direction={{ md: "row", base: "column" }}
-        align={{ base: "center" }}
-        justify={{ md: "flex-start", base: "center" }}
+        direction={{ base: "column", md: "row" }}
+        align={{ base: "center", md: "flex-end" }}
       >
         <Image
-          boxSize={{ xl: "221", lg: "200", md: "170", base: "221" }}
-          filter="drop-shadow(0px 20px 85px rgba(0, 0, 0, 0.4))"
+          filter="drop-shadow(0px 20px 85px rgba(0, 0, 0, 0.6))"
           src="src\assets\icons\Hero\hero.svg"
         />
-        <Stack
-          pl={{ md: "5", base: "0" }}
-          alignItems={{ base: "center", md: "flex-start" }}
-        >
+        <Stack pl={5}>
           <Show above="md">
-            <Text fontWeight="bold">Profile</Text>
+            <Text fontSize="3xl" fontWeight="semibold">
+              Profile
+            </Text>
           </Show>
-          <Heading
-            fontSize={{ xl: "9xl", lg: "8xl", md: "7xl", base: "7xl" }}
-            letterSpacing="tight"
-          >
+          <Heading fontSize="9xl" letterSpacing="tight">
             Ryan Bitonio
           </Heading>
           <Social />
