@@ -8,6 +8,9 @@ import {
   CardFooter,
   Icon,
   HStack,
+  Show,
+  CardHeader,
+  Hide,
 } from "@chakra-ui/react";
 import { SiJavascript, SiReact, SiChakraui } from "react-icons/si";
 
@@ -34,34 +37,49 @@ const ProjectCard = ({
         bg: "gray.600",
       }}
       borderRadius={10}
-      w={249}
+      maxW={{ base: "249", md: "249" }}
+      direction={{ base: "row", md: "column" }}
+      placeItems={{ base: "center", md: "normal" }}
     >
-      <CardBody>
+      <CardHeader p={{ base: "0", md: "5" }}>
         <Image m="auto" src={backgroundImage} alt={alt} borderRadius="lg" />
-        <Stack mt="6">
+      </CardHeader>
+      <CardBody>
+        <Stack>
           <Text fontSize="lg" letterSpacing="wide" fontWeight="bold">
             {language}
           </Text>
-          <Heading fontSize="4xl" size="md">
+          <Heading fontSize={{ base: "3xl", md: "4xl" }} size="md">
             {title}
           </Heading>
-          <Text
-            fontSize="3xl"
-            fontWeight="normal"
-            lineHeight="18px"
-            opacity="60%"
-          >
-            {description}
-          </Text>
+          <Show above="md">
+            <Text
+              fontSize="3xl"
+              fontWeight="normal"
+              lineHeight="18px"
+              opacity="60%"
+            >
+              {description}
+            </Text>
+          </Show>
         </Stack>
+        <Hide above="md">
+          <HStack pt={3}>
+            {Object.keys(stack).map((icon, index) => (
+              <Icon key={index} as={iconMap[icon]} />
+            ))}
+          </HStack>
+        </Hide>
       </CardBody>
-      <CardFooter pt={0}>
-        <HStack>
-          {Object.keys(stack).map((icon, index) => (
-            <Icon key={index} as={iconMap[icon]} />
-          ))}
-        </HStack>
-      </CardFooter>
+      <Show above="md">
+        <CardFooter pt={0}>
+          <HStack>
+            {Object.keys(stack).map((icon, index) => (
+              <Icon key={index} as={iconMap[icon]} />
+            ))}
+          </HStack>
+        </CardFooter>
+      </Show>
     </Card>
   );
 };
