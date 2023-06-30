@@ -24,8 +24,10 @@ const Hero = () => {
         align={{ base: "center", md: "flex-end" }}
       >
         <Image
+          boxSize={`clamp(177px, 18vw, 221px)`}
+          // boxSize={{ base: "177", md: "177", lg: "221" }}
           filter="drop-shadow(0px 20px 85px rgba(0, 0, 0, 0.6))"
-          src="src\assets\icons\Hero\hero.svg"
+          src="src/assets/icons/Hero/hero.svg"
         />
         <Stack pl={5}>
           <Show above="md">
@@ -33,7 +35,11 @@ const Hero = () => {
               Profile
             </Text>
           </Show>
-          <Heading fontSize="9xl" letterSpacing="tight">
+          <Heading
+            fontSize={"clamp(3.8rem, 70% + 5vw, 6rem)"}
+            // fontSize={{ base: "7xl", md: "8xl", lg: "9xl" }}
+            letterSpacing="tight"
+          >
             Ryan Bitonio
           </Heading>
           <Social />

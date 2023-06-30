@@ -30,9 +30,9 @@
       "id": 3,
       "title": "/portfolio",
       "description": "my personal web portfolio.",
-      "background_image": "https://res.cloudinary.com/dyeritf60/image/upload/v1687596134/portfolio_bi9qlr.png",
+      "background_image": "https://res.cloudinary.com/dyeritf60/image/upload/v1688125308/portfolio_uzzyrj.png",
       "alt": "portfolio",
-      "language": "JAVASCRIPT",
+      "language": "REACT",
       "stack": {
         "javascript": "SiJavascript",
         "react": "SiReact",

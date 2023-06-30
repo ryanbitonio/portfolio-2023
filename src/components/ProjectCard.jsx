@@ -37,49 +37,59 @@ const ProjectCard = ({
         bg: "gray.600",
       }}
       borderRadius={10}
-      maxW={{ base: "249", md: "249" }}
+      maxW={{ base: "200", md: "249" }}
       direction={{ base: "row", md: "column" }}
       placeItems={{ base: "center", md: "normal" }}
+      overflow="hidden"
     >
       <CardHeader p={{ base: "0", md: "5" }}>
-        <Image m="auto" src={backgroundImage} alt={alt} borderRadius="lg" />
+        <Image
+          maxW="100%"
+          m="auto"
+          objectFit="cover"
+          src={backgroundImage}
+          alt={alt}
+          borderRadius="lg"
+        />
       </CardHeader>
-      <CardBody>
-        <Stack>
-          <Text fontSize="lg" letterSpacing="wide" fontWeight="bold">
-            {language}
-          </Text>
-          <Heading fontSize={{ base: "3xl", md: "4xl" }} size="md">
-            {title}
-          </Heading>
-          <Show above="md">
-            <Text
-              fontSize="3xl"
-              fontWeight="normal"
-              lineHeight="18px"
-              opacity="60%"
-            >
-              {description}
+      <Stack>
+        <CardBody>
+          <Stack>
+            <Text fontSize="lg" letterSpacing="wide" fontWeight="bold">
+              {language}
             </Text>
-          </Show>
-        </Stack>
-        <Hide above="md">
-          <HStack pt={3}>
-            {Object.keys(stack).map((icon, index) => (
-              <Icon key={index} as={iconMap[icon]} />
-            ))}
-          </HStack>
-        </Hide>
-      </CardBody>
-      <Show above="md">
-        <CardFooter pt={0}>
-          <HStack>
-            {Object.keys(stack).map((icon, index) => (
-              <Icon key={index} as={iconMap[icon]} />
-            ))}
-          </HStack>
-        </CardFooter>
-      </Show>
+            <Heading fontSize={{ base: "3xl", md: "4xl" }} size="md">
+              {title}
+            </Heading>
+            <Show above="md">
+              <Text
+                fontSize="3xl"
+                fontWeight="normal"
+                lineHeight="18px"
+                opacity="60%"
+              >
+                {description}
+              </Text>
+            </Show>
+          </Stack>
+          <Hide above="md">
+            <HStack pt={3}>
+              {Object.keys(stack).map((icon, index) => (
+                <Icon key={index} as={iconMap[icon]} />
+              ))}
+            </HStack>
+          </Hide>
+        </CardBody>
+        <Show above="md">
+          <CardFooter pt={0}>
+            <HStack>
+              {Object.keys(stack).map((icon, index) => (
+                <Icon key={index} as={iconMap[icon]} />
+              ))}
+            </HStack>
+          </CardFooter>
+        </Show>
+      </Stack>
     </Card>
   );
 };
