@@ -31,10 +31,10 @@ const ProjectCards = ({
 
   return (
     <Card
-      direction={{ base: "row", sm: "column" }}
+      direction={{ base: "row", md: "column" }}
+      align={{ base: "center", md: "flex-start" }}
       overflow="hidden"
       maxW={{ base: "100%", md: "249" }}
-      justify={"flex-start"}
       _hover={{
         cursor: "pointer",
         boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
@@ -43,20 +43,20 @@ const ProjectCards = ({
       }}
     >
       <Image
-        borderRadius={5}
+        borderRadius={{ base: "0", md: "5" }}
         alignSelf={"center"}
-        mt={5}
-        maxW="80%"
+        mt={{ base: "0", md: "5" }}
+        w={{ base: "100px", md: "80%" }}
         objectFit="cover"
         src={backgroundImage}
         alt={alt}
       />
-      <Stack>
-        <CardBody>
-          <Text fontSize="lg" letterSpacing="wide" fontWeight="bold">
+      <Stack pl={{ base: "5", md: "0" }}>
+        <CardBody p={{ base: "0", md: "5" }}>
+          <Text fontSize="md" letterSpacing="wide" fontWeight="bold">
             {language}
           </Text>
-          <Heading fontSize={{ base: "3xl", md: "4xl" }} size="md">
+          <Heading py={1.5} fontSize={{ base: "3xl", md: "4xl" }} size="md">
             {title}
           </Heading>
           <Show above="md">
