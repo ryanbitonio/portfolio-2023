@@ -1,16 +1,14 @@
 import { SimpleGrid, Flex, Text, Icon, HStack } from "@chakra-ui/react";
 import useProjects from "../hooks/useProjects";
-import ProjectCards from "./ProjectCards";
-// import ProjectCard from "./ProjectCard";
+import ProjectCard from "./ProjectCard";
 import { ReactComponent as ProjectIcon } from "../assets/icons/Project/project.svg";
 
 const ProjectGrid = () => {
   const { data: projects } = useProjects();
   return (
     <Flex
-      p={10}
       direction="column"
-      align={{ base: "space-around", md: "center" }}
+      align={{ base: "space-around", md: "flex-start" }}
       justify={"center"}
     >
       <HStack alignSelf="flex-start" pb={5}>
@@ -22,7 +20,7 @@ const ProjectGrid = () => {
         spacing={{ base: "11", md: "22" }}
       >
         {projects?.map(project => (
-          <ProjectCards
+          <ProjectCard
             key={project.id}
             title={project.title}
             description={project.description}

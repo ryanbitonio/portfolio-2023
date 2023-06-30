@@ -3,7 +3,13 @@ import { ReactComponent as RedirectIcon } from "../assets/icons/Hero/redirect.sv
 
 const Social = () => {
   return (
-    <HStack fontSize="2xl" spacing={5} color="gray.300">
+    <HStack
+      justify={{ base: "center", md: "flex-start" }}
+      align={"center"}
+      fontSize="2xl"
+      spacing={5}
+      color="gray.300"
+    >
       <Icon as={RedirectIcon} />
       <Link>Facebook</Link>
       <Icon as={RedirectIcon} />

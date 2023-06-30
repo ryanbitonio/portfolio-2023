@@ -8,7 +8,6 @@ const sizes = {
   lg: definePartsStyle({
     container: {},
     item: {
-      pl: 25,
       fontWeight: "semibold",
       color: "gray.300",
       fontSize: "4xl",

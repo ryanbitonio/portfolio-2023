@@ -18,11 +18,12 @@ function App() {
       }}
     >
       <Show above="md">
-        <GridItem area="nav" bg="gray.800">
+        <GridItem p={6} area="nav" bg="gray.800">
           <Nav />
         </GridItem>
       </Show>
       <GridItem
+        p={6}
         marginBottom="-1.5"
         area="hero"
         bg={{ md: "gradient.xl_primary", base: "gradient.base_primary" }}
@@ -30,14 +31,14 @@ function App() {
         <Hero />
       </GridItem>
       <Show above="md">
-        <GridItem area="aside" bg="gray.800">
+        <GridItem p={6} area="aside" bg="gray.800">
           Aside
         </GridItem>
       </Show>
-      <GridItem area="main" bg={{ base: "gray.900", md: "gray.800" }}>
+      <GridItem p={6} area="main" bg={{ base: "gray.900", md: "gray.800" }}>
         <ProjectGrid />
       </GridItem>
-      <GridItem area="footer" bg="gray.800">
+      <GridItem p={6} area="footer" bg="gray.800">
         Footer
       </GridItem>
     </Grid>

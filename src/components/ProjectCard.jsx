@@ -11,6 +11,7 @@ import {
   Show,
   CardHeader,
   Hide,
+  Box,
 } from "@chakra-ui/react";
 import { SiJavascript, SiReact, SiChakraui } from "react-icons/si";
 
@@ -30,48 +31,44 @@ const ProjectCard = ({
 
   return (
     <Card
+      direction={{ base: "row", md: "column" }}
+      align={{ base: "center", md: "flex-start" }}
+      overflow="hidden"
+      maxW={{ base: "100%", md: "249" }}
       _hover={{
         cursor: "pointer",
         boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
         transform: "translateY(-2px)",
         bg: "gray.600",
       }}
-      borderRadius={10}
-      maxW={{ base: "200", md: "249" }}
-      direction={{ base: "row", md: "column" }}
-      placeItems={{ base: "center", md: "normal" }}
-      overflow="hidden"
     >
-      <CardHeader p={{ base: "0", md: "5" }}>
-        <Image
-          maxW="100%"
-          m="auto"
-          objectFit="cover"
-          src={backgroundImage}
-          alt={alt}
-          borderRadius="lg"
-        />
-      </CardHeader>
-      <Stack>
-        <CardBody>
-          <Stack>
-            <Text fontSize="lg" letterSpacing="wide" fontWeight="bold">
-              {language}
+      <Image
+        borderRadius={{ base: "0", md: "5" }}
+        alignSelf={"center"}
+        mt={{ base: "0", md: "5" }}
+        w={{ base: "100px", md: "65%" }}
+        objectFit="cover"
+        src={backgroundImage}
+        alt={alt}
+      />
+      <Stack pl={{ base: "5", md: "0" }}>
+        <CardBody p={{ base: "0", md: "5" }}>
+          <Text fontSize="md" letterSpacing="wide" fontWeight="bold">
+            {language}
+          </Text>
+          <Heading py={1.5} fontSize={{ base: "3xl", md: "4xl" }} size="md">
+            {title}
+          </Heading>
+          <Show above="md">
+            <Text
+              fontSize="3xl"
+              fontWeight="normal"
+              lineHeight="18px"
+              opacity="60%"
+            >
+              {description}
             </Text>
-            <Heading fontSize={{ base: "3xl", md: "4xl" }} size="md">
-              {title}
-            </Heading>
-            <Show above="md">
-              <Text
-                fontSize="3xl"
-                fontWeight="normal"
-                lineHeight="18px"
-                opacity="60%"
-              >
-                {description}
-              </Text>
-            </Show>
-          </Stack>
+          </Show>
           <Hide above="md">
             <HStack pt={3}>
               {Object.keys(stack).map((icon, index) => (
@@ -80,16 +77,16 @@ const ProjectCard = ({
             </HStack>
           </Hide>
         </CardBody>
-        <Show above="md">
-          <CardFooter pt={0}>
-            <HStack>
-              {Object.keys(stack).map((icon, index) => (
-                <Icon key={index} as={iconMap[icon]} />
-              ))}
-            </HStack>
-          </CardFooter>
-        </Show>
       </Stack>
+      <Show above="md">
+        <CardFooter h="100%" alignItems={"flex-end"}>
+          <HStack>
+            {Object.keys(stack).map((icon, index) => (
+              <Icon key={index} as={iconMap[icon]} />
+            ))}
+          </HStack>
+        </CardFooter>
+      </Show>
     </Card>
   );
 };

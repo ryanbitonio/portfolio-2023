@@ -20,12 +20,12 @@ const Hero = () => {
         <NavButtons />
       </Show>
       <Flex
+        pt={14}
         direction={{ base: "column", md: "row" }}
-        align={{ base: "center", md: "flex-end" }}
+        align={{ base: "center", md: "center" }}
       >
         <Image
           boxSize={`clamp(177px, 18vw, 221px)`}
-          // boxSize={{ base: "177", md: "177", lg: "221" }}
           filter="drop-shadow(0px 20px 85px rgba(0, 0, 0, 0.6))"
           src="src/assets/icons/Hero/hero.svg"
         />
@@ -36,8 +36,7 @@ const Hero = () => {
             </Text>
           </Show>
           <Heading
-            fontSize={"clamp(3.8rem, 70% + 5vw, 6rem)"}
-            // fontSize={{ base: "7xl", md: "8xl", lg: "9xl" }}
+            fontSize={"clamp(3rem, 70% + 5vw, 6rem)"}
             letterSpacing="tight"
           >
             Ryan Bitonio
