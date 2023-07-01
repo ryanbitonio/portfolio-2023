@@ -15,12 +15,17 @@ function App() {
       }}
       templateColumns={{
         base: "1fr",
-        md: "0.4fr 1fr",
+        md: "0.35fr 1fr",
       }}
     >
       <Show above="md">
         <GridItem p={6} area="nav" bg="gray.800">
           <Nav />
+        </GridItem>
+      </Show>
+      <Show above="md">
+        <GridItem p={6} area="aside" bg="gray.800">
+          Aside
         </GridItem>
       </Show>
       <GridItem
@@ -31,11 +36,6 @@ function App() {
       >
         <Hero />
       </GridItem>
-      <Show above="md">
-        <GridItem p={6} area="aside" bg="gray.800">
-          Aside
-        </GridItem>
-      </Show>
       <GridItem p={6} area="main" bg={{ base: "gray.900", md: "gray.800" }}>
         <ProjectGrid />
       </GridItem>
