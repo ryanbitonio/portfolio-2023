@@ -53,7 +53,11 @@ const ProjectCard = ({
       />
       <Stack pl={{ base: "5", md: "0" }}>
         <CardBody p={{ base: "0", md: "5" }}>
-          <Text fontSize="md" letterSpacing="wide" fontWeight="bold">
+          <Text
+            fontSize={{ base: "md", md: "lg" }}
+            letterSpacing="wide"
+            fontWeight="bold"
+          >
             {language}
           </Text>
           <Heading py={1.5} fontSize={{ base: "3xl", md: "4xl" }} size="md">

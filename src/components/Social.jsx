@@ -7,13 +7,17 @@ const Social = () => {
       justify={{ base: "center", md: "flex-start" }}
       align={"center"}
       fontSize="2xl"
-      spacing={5}
       color="gray.300"
+      spacing={5}
     >
-      <Icon as={RedirectIcon} />
-      <Link>Facebook</Link>
-      <Icon as={RedirectIcon} />
-      <Link>Github</Link>
+      <Link href="https://www.facebook.com/ryan.bitonio/" isExternal>
+        <Icon mr={5} as={RedirectIcon} />
+        Facebook
+      </Link>
+      <Link href="https://github.com/ryanbitonio" isExternal>
+        <Icon mr={5} as={RedirectIcon} />
+        Github
+      </Link>
     </HStack>
   );
 };

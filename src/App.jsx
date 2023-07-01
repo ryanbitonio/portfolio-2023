@@ -7,6 +7,7 @@ import ProjectGrid from "./components/ProjectGrid";
 function App() {
   return (
     <Grid
+      minH="100vh"
       gap={1.5}
       templateAreas={{
         base: `"hero" "main" "footer"`,
