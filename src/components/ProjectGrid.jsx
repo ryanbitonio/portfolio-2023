@@ -28,6 +28,7 @@ const ProjectGrid = () => {
             stack={project.stack}
             language={project.language}
             alt={project.alt}
+            url={project.url}
           />
         ))}
       </SimpleGrid>

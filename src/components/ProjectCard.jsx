@@ -11,7 +11,7 @@ import {
   Show,
   CardHeader,
   Hide,
-  Box,
+  Link,
 } from "@chakra-ui/react";
 import { SiJavascript, SiReact, SiChakraui } from "react-icons/si";
 
@@ -22,6 +22,7 @@ const ProjectCard = ({
   stack,
   language,
   alt,
+  url,
 }) => {
   const iconMap = {
     javascript: SiJavascript,
@@ -30,68 +31,70 @@ const ProjectCard = ({
   };
 
   return (
-    <Card
-      direction={{ base: "row", md: "column" }}
-      align={{ base: "center", md: "flex-start" }}
-      overflow="hidden"
-      maxW={{ base: "100%", md: "249" }}
-      _hover={{
-        cursor: "pointer",
-        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-        transform: "translateY(-2px)",
-        bg: "gray.600",
-      }}
-    >
-      <Image
-        borderRadius={{ base: "0", md: "5" }}
-        alignSelf={"center"}
-        mt={{ base: "0", md: "5" }}
-        w={{ base: "100px", md: "65%" }}
-        objectFit="cover"
-        src={backgroundImage}
-        alt={alt}
-      />
-      <Stack pl={{ base: "5", md: "0" }}>
-        <CardBody p={{ base: "0", md: "5" }}>
-          <Text
-            fontSize={{ base: "md", md: "lg" }}
-            letterSpacing="wide"
-            fontWeight="bold"
-          >
-            {language}
-          </Text>
-          <Heading py={1.5} fontSize={{ base: "3xl", md: "4xl" }} size="md">
-            {title}
-          </Heading>
-          <Show above="md">
+    <Link href={url} isExternal>
+      <Card
+        direction={{ base: "row", md: "column" }}
+        align={{ base: "center", md: "flex-start" }}
+        overflow="hidden"
+        maxW={{ base: "100%", md: "249" }}
+        _hover={{
+          cursor: "pointer",
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+          transform: "translateY(-2px)",
+          bg: "gray.600",
+        }}
+      >
+        <Image
+          borderRadius={{ base: "0", md: "5" }}
+          alignSelf={"center"}
+          mt={{ base: "0", md: "5" }}
+          w={{ base: "100px", md: "65%" }}
+          objectFit="cover"
+          src={backgroundImage}
+          alt={alt}
+        />
+        <Stack pl={{ base: "5", md: "0" }}>
+          <CardBody p={{ base: "0", md: "5" }}>
             <Text
-              fontSize="3xl"
-              fontWeight="normal"
-              lineHeight="18px"
-              opacity="60%"
+              fontSize={{ base: "md", md: "lg" }}
+              letterSpacing="wide"
+              fontWeight="bold"
             >
-              {description}
+              {language}
             </Text>
-          </Show>
-          <Hide above="md">
-            <HStack pt={3}>
+            <Heading py={1.5} fontSize={{ base: "3xl", md: "4xl" }} size="md">
+              {title}
+            </Heading>
+            <Show above="md">
+              <Text
+                fontSize="3xl"
+                fontWeight="normal"
+                lineHeight="18px"
+                opacity="60%"
+              >
+                {description}
+              </Text>
+            </Show>
+            <Hide above="md">
+              <HStack pt={3}>
+                {Object.keys(stack).map((icon, index) => (
+                  <Icon key={index} as={iconMap[icon]} />
+                ))}
+              </HStack>
+            </Hide>
+          </CardBody>
+        </Stack>
+        <Show above="md">
+          <CardFooter h="100%" alignItems={"flex-end"}>
+            <HStack>
               {Object.keys(stack).map((icon, index) => (
                 <Icon key={index} as={iconMap[icon]} />
               ))}
             </HStack>
-          </Hide>
-        </CardBody>
-      </Stack>
-      <Show above="md">
-        <CardFooter h="100%" alignItems={"flex-end"}>
-          <HStack>
-            {Object.keys(stack).map((icon, index) => (
-              <Icon key={index} as={iconMap[icon]} />
-            ))}
-          </HStack>
-        </CardFooter>
-      </Show>
-    </Card>
+          </CardFooter>
+        </Show>
+      </Card>
+    </Link>
   );
 };
 

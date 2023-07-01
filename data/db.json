@@ -7,6 +7,7 @@
       "background_image": "https://res.cloudinary.com/dyeritf60/image/upload/v1687596024/family-tree_qdicin.png",
       "alt": "family tree",
       "language": "TYPESCRIPT",
+      "url": "https://family-tree-alpha.vercel.app/",
       "stack": {
         "javascript": "SiJavascript",
         "react": "SiReact",
@@ -20,6 +21,8 @@
       "background_image": "https://res.cloudinary.com/dyeritf60/image/upload/v1687596135/game-hub_hfhfqz.png",
       "alt": "game hub",
       "language": "TYPESCRIPT",
+      "url": "https://game-hub-psi-virid.vercel.app/",
+
       "stack": {
         "javascript": "SiJavascript",
         "react": "SiReact",
@@ -33,6 +36,8 @@
       "background_image": "https://res.cloudinary.com/dyeritf60/image/upload/v1688125308/portfolio_uzzyrj.png",
       "alt": "portfolio",
       "language": "REACT",
+      "url": "https://game-hub-psi-virid.vercel.app/",
+
       "stack": {
         "javascript": "SiJavascript",
         "react": "SiReact",
