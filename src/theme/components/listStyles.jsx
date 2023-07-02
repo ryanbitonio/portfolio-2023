@@ -10,13 +10,9 @@ const sizes = {
     item: {
       fontWeight: "semibold",
       color: "gray.300",
-      fontSize: "4xl",
     },
     icon: {
-      stroke: "gray.300",
       mr: 5,
-      w: "24px",
-      h: "24px",
     },
   }),
 };

@@ -1,4 +1,4 @@
-import { List, ListItem, ListIcon, Link, HStack } from "@chakra-ui/react";
+import { List, ListItem, ListIcon, Link, HStack, Flex } from "@chakra-ui/react";
 import { useState } from "react";
 import { GoHome, GoHomeFill } from "react-icons/go";
 import { RiHeadphoneLine, RiHeadphoneFill } from "react-icons/ri";
@@ -32,24 +32,28 @@ const Nav = () => {
   return (
     <List size="lg" spacing={3}>
       {menuList.map(({ id, title, icon, activeIcon }, index) => (
-        <HStack key={index}>
-          <ListItem
+        <ListItem
+          key={index}
+          _hover={{
+            color: "white",
+          }}
+        >
+          <Link
+            display="flex"
+            alignItems="center"
+            color={selectedMenu === id ? "white" : "default"}
             _hover={{
-              color: "white",
+              textDecoration: "none",
             }}
+            onClick={() => handleMenuClick(id)}
           >
-            <Link
-              onClick={() => handleMenuClick(id)}
-              _hover={{
-                textDecoration: "none",
-              }}
-              color={selectedMenu === id ? "white" : "default"}
-            >
-              <ListIcon as={selectedMenu === id ? activeIcon : icon} />
-              {title}
-            </Link>
-          </ListItem>
-        </HStack>
+            <ListIcon
+              boxSize={6}
+              as={selectedMenu === id ? activeIcon : icon}
+            />
+            {title}
+          </Link>
+        </ListItem>
       ))}
     </List>
   );
