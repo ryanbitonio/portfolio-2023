@@ -29,14 +29,14 @@ const Hero = () => {
           filter="drop-shadow(0px 20px 85px rgba(0, 0, 0, 0.6))"
           src="src/assets/icons/Hero/hero.svg"
         />
-        <Stack pl={5}>
+        <Stack pl={{ base: "0", md: "5" }}>
           <Show above="md">
             <Text fontSize="3xl" fontWeight="semibold">
               Profile
             </Text>
           </Show>
           <Heading
-            fontSize={"clamp(3rem, 70% + 5vw, 6rem)"}
+            fontSize={"clamp(2.5rem, 70% + 5vw, 6rem)"}
             letterSpacing="tight"
           >
             Ryan Bitonio

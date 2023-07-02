@@ -4,7 +4,12 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 
 const Social = () => {
   return (
-    <HStack fontSize="2xl" color="gray.300" spacing={5}>
+    <HStack
+      justify={{ base: "center", md: "flex-start" }}
+      fontSize="2xl"
+      color="gray.300"
+      spacing={5}
+    >
       <Link
         _hover={{
           color: "white",
@@ -12,7 +17,7 @@ const Social = () => {
         href="https://www.facebook.com/ryan.bitonio/"
         isExternal
       >
-        <Flex direction="row">
+        <Flex>
           <HiOutlineExternalLink style={{ marginRight: "13" }} size={18} />
           Facebook
         </Flex>
@@ -24,7 +29,7 @@ const Social = () => {
         href="https://github.com/ryanbitonio"
         isExternal
       >
-        <Flex direction="row">
+        <Flex>
           <HiOutlineExternalLink style={{ marginRight: "13" }} size={18} />
           Github
         </Flex>
