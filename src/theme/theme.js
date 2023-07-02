@@ -10,12 +10,7 @@ const theme = extendTheme({
     global: {
       body: {
         bg: "gray.900",
-      },
-      a: {
-        color: "teal.500",
-        _hover: {
-          textDecoration: "none",
-        },
+        color: "white",
       },
     },
   },

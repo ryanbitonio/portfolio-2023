@@ -4,8 +4,10 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import ProjectGrid from "./components/ProjectGrid";
 import Aside from "./components/Aside";
+import { useState } from "react";
 
 function App() {
+  const [courseQuery, setCourseQuery] = useState({});
   return (
     <Grid
       gap={1.5}
@@ -24,8 +26,12 @@ function App() {
         </GridItem>
       </Show>
       <Show above="md">
-        <GridItem p={6} area="aside" bg="gray.800">
-          <Aside />
+        <GridItem py={6} pl={6} area="aside" bg="gray.800">
+          <Aside
+            onSearch={searchText =>
+              setCourseQuery({ ...courseQuery, searchText })
+            }
+          />
         </GridItem>
       </Show>
       <GridItem

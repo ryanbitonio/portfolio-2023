@@ -8,21 +8,30 @@ import {
   Image,
   Box,
 } from "@chakra-ui/react";
-import { ReactComponent as LibraryIcon } from "../assets/icons/Aside/library.svg";
+import { RiAppsLine, RiAppsFill } from "react-icons/ri";
 import courses from "../../data/courses";
 import Search from "./Search";
+import { useState } from "react";
+import { color } from "framer-motion";
 
-const Aside = () => {
+const Aside = ({ onSearch }) => {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <Stack spacing={5}>
-      <HStack>
-        <Icon boxSize={5} mr={3} as={LibraryIcon} />
-        <Text fontWeight="semibold" color="gray.300">
-          My Library
-        </Text>
+      <HStack
+        onClick={() => setSidebarOpen(!isSidebarOpen)}
+        color={isSidebarOpen ? "white" : "gray.300"}
+        _hover={{
+          color: "white",
+          cursor: "pointer",
+        }}
+      >
+        <Icon boxSize={6} mr={3} as={isSidebarOpen ? RiAppsFill : RiAppsLine} />
+        <Text fontWeight="semibold">My Library</Text>
       </HStack>
-      <Box>
-        <Search />
+      <Box pr={6}>
+        <Search onSearch={onSearch} />
       </Box>
       <Box mt={1}>
         {courses.map(({ id, title, description, thumbnail }) => (
@@ -37,15 +46,10 @@ const Aside = () => {
           >
             <Image objectFit="cover" src={thumbnail} alt={title} />
             <Flex overflow="hidden" gap={1} direction={"column"}>
-              <Heading isTruncated fontSize="4xl" fontWeight="semibold">
+              <Heading isTruncated fontSize="4xl" fontWeight="400">
                 {title}
               </Heading>
-              <Text
-                isTruncated
-                fontSize="3xl"
-                fontWeight="normal"
-                opacity="60%"
-              >
+              <Text isTruncated fontSize="3xl" fontWeight="300" opacity="60%">
                 {description}
               </Text>
             </Flex>
