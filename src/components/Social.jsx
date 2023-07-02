@@ -30,7 +30,7 @@ const Social = () => {
         isExternal
       >
         <Flex>
-          <HiOutlineExternalLink style={{ marginRight: "13" }} size={18} />
+          <HiOutlineExternalLink size={18} style={{ marginRight: "13" }} />
           Github
         </Flex>
       </Link>
