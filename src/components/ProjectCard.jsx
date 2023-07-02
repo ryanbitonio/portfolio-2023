@@ -31,8 +31,9 @@ const ProjectCard = ({
   };
 
   return (
-    <Link href={url} isExternal>
+    <Link _hover={{ textDecoration: "none" }} href={url} isExternal>
       <Card
+        h="100%"
         direction={{ base: "row", md: "column" }}
         align={{ base: "center", md: "flex-start" }}
         overflow="hidden"

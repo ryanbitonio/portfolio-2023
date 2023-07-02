@@ -1,22 +1,33 @@
-import { Box, HStack, Icon, Link } from "@chakra-ui/react";
-import { ReactComponent as RedirectIcon } from "../assets/icons/Hero/redirect.svg";
+import { HStack, Flex, Link } from "@chakra-ui/react";
+
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 const Social = () => {
   return (
-    <HStack
-      justify={{ base: "center", md: "flex-start" }}
-      align={"center"}
-      fontSize="2xl"
-      color="gray.300"
-      spacing={5}
-    >
-      <Link href="https://www.facebook.com/ryan.bitonio/" isExternal>
-        <Icon mr={5} as={RedirectIcon} />
-        Facebook
+    <HStack fontSize="2xl" color="gray.300" spacing={5}>
+      <Link
+        _hover={{
+          color: "white",
+        }}
+        href="https://www.facebook.com/ryan.bitonio/"
+        isExternal
+      >
+        <Flex direction="row">
+          <HiOutlineExternalLink style={{ marginRight: "13" }} size={18} />
+          Facebook
+        </Flex>
       </Link>
-      <Link href="https://github.com/ryanbitonio" isExternal>
-        <Icon mr={5} as={RedirectIcon} />
-        Github
+      <Link
+        _hover={{
+          color: "white",
+        }}
+        href="https://github.com/ryanbitonio"
+        isExternal
+      >
+        <Flex direction="row">
+          <HiOutlineExternalLink style={{ marginRight: "13" }} size={18} />
+          Github
+        </Flex>
       </Link>
     </HStack>
   );
