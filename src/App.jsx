@@ -3,6 +3,7 @@ import { Grid, GridItem, Show, Flex, Stack } from "@chakra-ui/react";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import ProjectGrid from "./components/ProjectGrid";
+import Aside from "./components/Aside";
 
 function App() {
   return (
@@ -24,8 +25,8 @@ function App() {
         </GridItem>
       </Show>
       <Show above="md">
-        <GridItem p={6} area="aside" bg="gray.800">
-          Aside
+        <GridItem pl={6} py={6} area="aside" bg="gray.800">
+          <Aside />
         </GridItem>
       </Show>
       <GridItem

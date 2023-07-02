@@ -12,7 +12,7 @@ const ProjectGrid = () => {
       justify={"center"}
     >
       <HStack alignSelf="flex-start" pb={5}>
-        <Icon mr={3} as={ProjectIcon} />
+        <Icon boxSize={5} mr={3} as={ProjectIcon} />
         <Text fontWeight="semibold">Projects</Text>
       </HStack>
       <SimpleGrid
