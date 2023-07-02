@@ -1,11 +1,8 @@
-import { List, ListItem, ListIcon, Link, HStack, Flex } from "@chakra-ui/react";
-import { ReactComponent as HomeIcon } from "../assets/icons/Nav/home.svg";
-import { ReactComponent as ExperienceIcon } from "../assets/icons/Nav/experience.svg";
-import { ReactComponent as ConnectIcon } from "../assets/icons/Nav/connect.svg";
-import { ReactComponent as HomeIconHover } from "../assets/icons/Nav/home-hover.svg";
-import { ReactComponent as ExperienceIconHover } from "../assets/icons/Nav/experience-hover.svg";
-import { ReactComponent as ConnectIconHover } from "../assets/icons/Nav/connect-hover.svg";
+import { List, ListItem, ListIcon, Link, HStack } from "@chakra-ui/react";
 import { useState } from "react";
+import { GoHome, GoHomeFill } from "react-icons/go";
+import { RiHeadphoneLine, RiHeadphoneFill } from "react-icons/ri";
+import { BiDisc, BiSolidDisc } from "react-icons/bi";
 
 const Nav = () => {
   const [selectedMenu, setSelectedMenu] = useState(1);
@@ -16,27 +13,31 @@ const Nav = () => {
     {
       id: 1,
       title: "Home",
-      icon: HomeIcon,
-      activeIcon: HomeIconHover,
+      icon: GoHome,
+      activeIcon: GoHomeFill,
     },
     {
       id: 2,
       title: "Experience",
-      icon: ExperienceIcon,
-      activeIcon: ExperienceIconHover,
+      icon: RiHeadphoneLine,
+      activeIcon: RiHeadphoneFill,
     },
     {
       id: 3,
       title: "Connect",
-      icon: ConnectIcon,
-      activeIcon: ConnectIconHover,
+      icon: BiDisc,
+      activeIcon: BiSolidDisc,
     },
   ];
   return (
     <List size="lg" spacing={3}>
       {menuList.map(({ id, title, icon, activeIcon }, index) => (
-        <HStack>
-          <ListItem key={index}>
+        <HStack key={index}>
+          <ListItem
+            _hover={{
+              color: "white",
+            }}
+          >
             <Link
               onClick={() => handleMenuClick(id)}
               _hover={{
@@ -44,10 +45,7 @@ const Nav = () => {
               }}
               color={selectedMenu === id ? "white" : "default"}
             >
-              <ListIcon
-                as={selectedMenu === id ? activeIcon : icon}
-                fill={index === 2 && "gray.300"}
-              />
+              <ListIcon as={selectedMenu === id ? activeIcon : icon} />
               {title}
             </Link>
           </ListItem>
