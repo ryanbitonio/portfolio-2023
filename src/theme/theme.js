@@ -3,8 +3,8 @@ import { listTheme as List } from "./components/listStyles";
 
 const theme = extendTheme({
   fonts: {
-    heading: `'Inter', sans-serif`,
-    body: `'Inter', sans-serif`,
+    heading: `'Circular', sans-serif`,
+    body: `'Circular', sans-serif`,
   },
   styles: {
     global: {
@@ -29,12 +29,6 @@ const theme = extendTheme({
         "linear-gradient(180deg, rgba(113, 247, 206, 0.8) -7.68%, rgba(44, 85, 72, 0) 101.68%)",
       base_secondary:
         "linear-gradient(180deg, rgba(131, 131, 131, 0.8) -7.68%, rgba(44, 85, 72, 0) 102.93%)",
-    },
-    breakpoints: {
-      sm: "320px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1440px",
     },
     gray: {
       100: "#FFFFFF",

@@ -20,7 +20,7 @@ const Hero = () => {
         <NavButtons />
       </Show>
       <Flex
-        pt={14}
+        pt={7}
         direction={{ base: "column", md: "row" }}
         align={{ base: "center", md: "center" }}
       >
@@ -38,6 +38,7 @@ const Hero = () => {
           <Heading
             fontSize={"clamp(2.5rem, 70% + 5vw, 6rem)"}
             letterSpacing="tight"
+            fontWeight={800}
           >
             Ryan Bitonio
           </Heading>

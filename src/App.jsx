@@ -8,7 +8,6 @@ import Aside from "./components/Aside";
 function App() {
   return (
     <Grid
-      minH="100vh"
       gap={1.5}
       templateAreas={{
         base: `"hero" "main" "footer"`,
@@ -16,7 +15,7 @@ function App() {
       }}
       templateColumns={{
         base: "1fr",
-        md: "0.35fr 1fr",
+        md: "0.3fr 1fr",
       }}
     >
       <Show above="md">
@@ -25,7 +24,7 @@ function App() {
         </GridItem>
       </Show>
       <Show above="md">
-        <GridItem pl={6} py={6} area="aside" bg="gray.800">
+        <GridItem p={6} area="aside" bg="gray.800">
           <Aside />
         </GridItem>
       </Show>
