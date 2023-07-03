@@ -86,10 +86,10 @@ const ProjectCard = ({
           </CardBody>
         </Stack>
         <Show above="md">
-          <CardFooter>
+          <CardFooter h="100%">
             <HStack>
               {Object.keys(stack).map((icon, index) => (
-                <Icon key={index} as={iconMap[icon]} />
+                <Icon alignSelf="flex-end" key={index} as={iconMap[icon]} />
               ))}
             </HStack>
           </CardFooter>
