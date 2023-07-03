@@ -1,7 +1,6 @@
 import { SimpleGrid, Flex, Text, Icon, HStack } from "@chakra-ui/react";
 import useProjects from "../hooks/useProjects";
 import ProjectCard from "./ProjectCard";
-import { ReactComponent as ProjectIcon } from "../assets/icons/Project/project.svg";
 
 const ProjectGrid = () => {
   const { data: projects } = useProjects();
@@ -12,7 +11,6 @@ const ProjectGrid = () => {
       justify={"center"}
     >
       <HStack alignSelf="flex-start" pb={5}>
-        {/* <Icon boxSize={5} mr={3} as={ProjectIcon} /> */}
         <Text fontWeight="semibold" fontSize="5xl" letterSpacing="tight">
           Featured Projects Today
         </Text>

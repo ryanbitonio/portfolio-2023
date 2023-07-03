@@ -1,10 +1,11 @@
 import "./App.css";
+import { useState } from "react";
 import { Grid, GridItem, Show, Flex, Stack } from "@chakra-ui/react";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import ProjectGrid from "./components/ProjectGrid";
 import Aside from "./components/Aside";
-import { useState } from "react";
+import Footer from "./components/Footer";
 
 function App() {
   const [courseQuery, setCourseQuery] = useState({});
@@ -46,7 +47,7 @@ function App() {
         <ProjectGrid />
       </GridItem>
       <GridItem p={6} area="footer" bg="gray.800">
-        Footer
+        <Footer />
       </GridItem>
     </Grid>
   );
