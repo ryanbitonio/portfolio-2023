@@ -1,9 +1,7 @@
 import { AiFillPlayCircle } from "react-icons/ai";
 import {
   Button,
-  Box,
   Modal,
-  ModalOverlay,
   ModalContent,
   ModalCloseButton,
 } from "@chakra-ui/react";
@@ -29,21 +27,21 @@ const Modals = () => {
           size={34}
         />
       </Button>
-      <Modal
-        scrollBehavior="inside"
-        onClose={onClose}
-        size="full"
-        isOpen={isOpen}
-      >
-        <ModalOverlay />
+      <Modal onClose={onClose} size="full" isOpen={isOpen}>
         <ModalContent>
           <ModalCloseButton
+            zIndex={999}
+            _hover={{
+              bg: "white",
+              color: "gray.700",
+            }}
             _focus={{
               boxShadow: "none",
             }}
             bg="gray.700"
           />
           <video
+            onEnded={() => onClose()}
             autoPlay
             style={{
               height: "100vh",
