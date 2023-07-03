@@ -6,14 +6,13 @@ const ProjectGrid = () => {
   const { data: projects } = useProjects();
   return (
     <Flex direction="column" align={{ base: "space-around", md: "default" }}>
-      <HStack alignSelf="flex-start" pb={5}>
+      <HStack pb={5}>
         <Text fontWeight="semibold" fontSize="5xl" letterSpacing="tight">
           Featured Projects Today
         </Text>
       </HStack>
       <SimpleGrid
-        justify={"center"}
-        gridTemplateColumns="repeat(auto-fit, minmax(247px, 1fr))"
+        gridTemplateColumns="repeat(auto-fit, minmax(202px, 1fr))"
         spacing={3}
       >
         {projects?.map(project => (

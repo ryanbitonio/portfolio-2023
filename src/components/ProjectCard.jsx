@@ -69,7 +69,7 @@ const ProjectCard = ({
             <Show above="md">
               <Text
                 fontSize="3xl"
-                fontWeight="normal"
+                fontWeight="300"
                 lineHeight="18px"
                 opacity="60%"
               >
@@ -85,15 +85,6 @@ const ProjectCard = ({
             </Hide>
           </CardBody>
         </Stack>
-        <Show above="md">
-          <CardFooter h="100%">
-            <HStack>
-              {Object.keys(stack).map((icon, index) => (
-                <Icon alignSelf="flex-end" key={index} as={iconMap[icon]} />
-              ))}
-            </HStack>
-          </CardFooter>
-        </Show>
       </Card>
     </Link>
   );
