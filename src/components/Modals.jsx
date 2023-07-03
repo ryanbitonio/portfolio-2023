@@ -48,7 +48,10 @@ const Modals = () => {
               objectFit: "cover",
             }}
           >
-            <source src="/src/assets/icons/Footer/reel.mp4" type="video/mp4" />
+            <source
+              src="https://res.cloudinary.com/dyeritf60/video/upload/v1688361631/reel_p9nn5y.mp4"
+              type="video/mp4"
+            />
           </video>
         </ModalContent>
       </Modal>
