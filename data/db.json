@@ -22,7 +22,6 @@
       "alt": "game hub",
       "language": "TYPESCRIPT",
       "url": "https://game-hub-psi-virid.vercel.app/",
-
       "stack": {
         "javascript": "SiJavascript",
         "react": "SiReact",
@@ -37,7 +36,118 @@
       "alt": "portfolio",
       "language": "REACT",
       "url": "https://game-hub-psi-virid.vercel.app/",
-
+      "stack": {
+        "javascript": "SiJavascript",
+        "react": "SiReact",
+        "chakra": "SiChakraui"
+      }
+    },
+    {
+      "id": 4,
+      "title": "/dummy-01",
+      "description": "Lorem ipsum dolor sit amet",
+      "background_image": "https://res.cloudinary.com/dyeritf60/image/upload/v1688392079/dummy-1_sccoxw.png",
+      "alt": "portfolio",
+      "language": "REACT",
+      "url": "https://game-hub-psi-virid.vercel.app/",
+      "stack": {
+        "javascript": "SiJavascript",
+        "react": "SiReact",
+        "chakra": "SiChakraui"
+      }
+    },
+    {
+      "id": 5,
+      "title": "/dummy-02",
+      "description": "Lorem ipsum dolor sit amet",
+      "background_image": "https://res.cloudinary.com/dyeritf60/image/upload/v1688392079/dummy-2_ymcpse.png",
+      "alt": "portfolio",
+      "language": "REACT",
+      "url": "https://game-hub-psi-virid.vercel.app/",
+      "stack": {
+        "javascript": "SiJavascript",
+        "react": "SiReact",
+        "chakra": "SiChakraui"
+      }
+    },
+    {
+      "id": 6,
+      "title": "/dummy-03",
+      "description": "Lorem ipsum dolor sit amet",
+      "background_image": "https://res.cloudinary.com/dyeritf60/image/upload/v1688392079/dummy-3_whtzfm.png",
+      "alt": "portfolio",
+      "language": "REACT",
+      "url": "https://game-hub-psi-virid.vercel.app/",
+      "stack": {
+        "javascript": "SiJavascript",
+        "react": "SiReact",
+        "chakra": "SiChakraui"
+      }
+    },
+    {
+      "id": 7,
+      "title": "/dummy-04",
+      "description": "Lorem ipsum dolor sit amet",
+      "background_image": "https://res.cloudinary.com/dyeritf60/image/upload/v1688392079/dummy-4_t2l7kp.png",
+      "alt": "portfolio",
+      "language": "REACT",
+      "url": "https://game-hub-psi-virid.vercel.app/",
+      "stack": {
+        "javascript": "SiJavascript",
+        "react": "SiReact",
+        "chakra": "SiChakraui"
+      }
+    },
+    {
+      "id": 8,
+      "title": "/dummy-05",
+      "description": "Lorem ipsum dolor sit amet",
+      "background_image": "https://res.cloudinary.com/dyeritf60/image/upload/v1688392079/dummy-5_esftq6.png",
+      "alt": "portfolio",
+      "language": "REACT",
+      "url": "https://game-hub-psi-virid.vercel.app/",
+      "stack": {
+        "javascript": "SiJavascript",
+        "react": "SiReact",
+        "chakra": "SiChakraui"
+      }
+    },
+    {
+      "id": 9,
+      "title": "/dummy-06",
+      "description": "Lorem ipsum dolor sit amet",
+      "background_image": "https://res.cloudinary.com/dyeritf60/image/upload/v1688392080/dummy-6_nldkvp.png",
+      "alt": "portfolio",
+      "language": "REACT",
+      "url": "https://game-hub-psi-virid.vercel.app/",
+      "stack": {
+        "javascript": "SiJavascript",
+        "react": "SiReact",
+        "chakra": "SiChakraui"
+      }
+    },
+    {
+      "id": 10,
+      "title": "/dummy-07",
+      "description": "Lorem ipsum dolor sit amet",
+      "background_image": "https://res.cloudinary.com/dyeritf60/image/upload/v1688392080/dummy-7_ffulm6.png",
+      "alt": "portfolio",
+      "language": "REACT",
+      "url": "https://game-hub-psi-virid.vercel.app/",
+      "stack": {
+        "javascript": "SiJavascript",
+        "react": "SiReact",
+        "chakra": "SiChakraui"
+      }
+    },
+    {
+      "id": 11,
+      "title": "/dummy-08",
+      "description": "Lorem ipsum dolor sit amet",
+      "background_image": "https://res.cloudinary.com/dyeritf60/image/upload/v1688392080/dummy-8_hicao2.png",
+      "alt": "portfolio",
+      "language": "REACT",
+      "url": "https://game-hub-psi-virid.vercel.app/",
       "stack": {
         "javascript": "SiJavascript",
         "react": "SiReact",
