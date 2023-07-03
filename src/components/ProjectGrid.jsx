@@ -16,7 +16,7 @@ const ProjectGrid = () => {
         </Text>
       </HStack>
       <SimpleGrid
-        columns={{ base: "1", sm: "2", md: "2", lg: "3" }}
+        columns={{ base: "1", sm: "2", md: "3", lg: "4", xl: "5" }}
         spacing={{ base: "11", md: "22" }}
       >
         {projects?.map(project => (
