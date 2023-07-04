@@ -1,9 +1,25 @@
-import { SimpleGrid, Flex, Text, Icon, HStack } from "@chakra-ui/react";
+import {
+  SimpleGrid,
+  Flex,
+  Text,
+  Alert,
+  AlertIcon,
+  HStack,
+} from "@chakra-ui/react";
 import useProjects from "../hooks/useProjects";
 import ProjectCard from "./ProjectCard";
 
 const ProjectGrid = () => {
-  const { data: projects } = useProjects();
+  const { data: projects, error, isLoading } = useProjects();
+
+  if (error)
+    return (
+      <Alert bg="#E53E3E" color="white" status="error">
+        <AlertIcon color="white" />
+        There was an error processing your request
+      </Alert>
+    );
+
   return (
     <Flex direction="column" align={{ base: "space-around", md: "default" }}>
       <HStack pb={5}>
