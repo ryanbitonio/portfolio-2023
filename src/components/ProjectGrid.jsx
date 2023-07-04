@@ -8,9 +8,11 @@ import {
 } from "@chakra-ui/react";
 import useProjects from "../hooks/useProjects";
 import ProjectCard from "./ProjectCard";
+import ProjectCardSkeleton from "./ProjectCardSkeleton";
 
 const ProjectGrid = () => {
   const { data: projects, error, isLoading } = useProjects();
+  const skeletons = [...Array(11).keys()].map(i => i + 1);
 
   if (error)
     return (
@@ -27,10 +29,15 @@ const ProjectGrid = () => {
           Featured Projects Today
         </Text>
       </HStack>
+
       <SimpleGrid
         gridTemplateColumns="repeat(auto-fit, minmax(202px, 1fr))"
         spacing={3}
       >
+        {isLoading &&
+          skeletons.map(skeleton => (
+            <ProjectCardSkeleton key={skeleton}></ProjectCardSkeleton>
+          ))}
         {projects?.map(project => (
           <ProjectCard
             key={project.id}
