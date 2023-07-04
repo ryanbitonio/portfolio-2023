@@ -35,9 +35,7 @@ const ProjectGrid = () => {
         spacing={3}
       >
         {isLoading &&
-          skeletons.map(skeleton => (
-            <ProjectCardSkeleton key={skeleton}></ProjectCardSkeleton>
-          ))}
+          skeletons.map(skeleton => <ProjectCardSkeleton key={skeleton} />)}
         {projects?.map(project => (
           <ProjectCard
             key={project.id}

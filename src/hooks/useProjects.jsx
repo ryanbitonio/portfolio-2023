@@ -7,7 +7,7 @@ const useProjects = () => {
 
   return useQuery({
     queryKey: ["projects"],
-    queryFn: () => fetchProjects(),
+    queryFn: fetchProjects,
   });
 };
 

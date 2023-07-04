@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import { Grid, GridItem, Show, Flex, Stack } from "@chakra-ui/react";
+import { Grid, GridItem, Show, Flex, Stack, Box } from "@chakra-ui/react";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import ProjectGrid from "./components/ProjectGrid";
@@ -27,7 +27,7 @@ function App() {
         </GridItem>
       </Show>
       <Show above="md">
-        <GridItem py={6} pl={6} area="aside" bg="gray.800">
+        <GridItem h="min-content" py={6} pl={6} area="aside" bg="gray.800">
           <Aside
             onSearch={searchText =>
               setCourseQuery({ ...courseQuery, searchText })
@@ -36,6 +36,7 @@ function App() {
         </GridItem>
       </Show>
       <GridItem
+        h="min-content"
         p={6}
         marginBottom="-1.5"
         area="hero"
