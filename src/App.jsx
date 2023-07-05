@@ -37,14 +37,15 @@ function App() {
           area="aside"
           bg="gray.800"
         >
-          <Aside
-            onSearch={searchText =>
-              setCourseQuery({ ...courseQuery, searchText })
-            }
-          />
+          <Box h="100%" overflowY={"scroll"}>
+            <Aside
+              onSearch={searchText =>
+                setCourseQuery({ ...courseQuery, searchText })
+              }
+            />
+          </Box>
         </GridItem>
       </Show>
-
       <GridItem
         overflowY={"auto"}
         borderRadius={10}
@@ -53,13 +54,13 @@ function App() {
         area="main"
         bg={{ base: "gray.900", md: "gray.800" }}
       >
-        <Stack h="90vh" scroll spacing={20}>
+        <Stack spacing={20}>
           <Hero />
           <ProjectGrid />
         </Stack>
       </GridItem>
-      <GridItem p={6} area="footer" bg="gray.800">
-        <Stack h="100%" justify={"center"}>
+      <GridItem p={6} area="footer" bg="gray.900">
+        <Stack justify={"center"}>
           <Footer />
         </Stack>
       </GridItem>
