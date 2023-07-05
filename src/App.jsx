@@ -58,10 +58,8 @@ function App() {
           <ProjectGrid />
         </Stack>
       </GridItem>
-      <GridItem mt={-1.5} p={6} area="footer" bg="gray.900">
-        <Stack justify={"center"}>
-          <Footer />
-        </Stack>
+      <GridItem h="10vh" mt={-1.5} p={6} area="footer" bg="gray.900">
+        <Footer />
       </GridItem>
     </Grid>
   );

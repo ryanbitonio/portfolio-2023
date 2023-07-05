@@ -1,4 +1,12 @@
-import { HStack, Image, Flex, Heading, Text, Box } from "@chakra-ui/react";
+import {
+  HStack,
+  Image,
+  Flex,
+  Heading,
+  Text,
+  Box,
+  Divider,
+} from "@chakra-ui/react";
 import Reel from "./Reel";
 import ReelThumbnail from "../assets/thumbnails/reel.png";
 import { RiHeartLine, RiHeartFill } from "react-icons/ri";
@@ -12,7 +20,7 @@ const Footer = () => {
   };
 
   return (
-    <HStack justify="space-between">
+    <HStack h="100%" justify="space-between">
       <HStack>
         <Image pr={3} src={ReelThumbnail} />
         <Flex pr={5} direction="column" gap={1}>

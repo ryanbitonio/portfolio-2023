@@ -1,4 +1,4 @@
-import { AiFillPlayCircle } from "react-icons/ai";
+import { PiPlayCircleFill } from "react-icons/pi";
 import {
   Button,
   Modal,
@@ -20,11 +20,11 @@ const Reel = () => {
         variant="link"
         cursor="default"
       >
-        <AiFillPlayCircle
+        <PiPlayCircleFill
           className="play"
           onClick={onOpen}
           cursor="pointer"
-          size={55}
+          size={50}
         />
       </Button>
       <Modal onClose={onClose} size="full" isOpen={isOpen}>
