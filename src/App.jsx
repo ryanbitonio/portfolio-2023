@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import { Grid, GridItem, Show, Flex, Stack, Box } from "@chakra-ui/react";
+import { Grid, GridItem, Show, Flex, Box, Stack } from "@chakra-ui/react";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import ProjectGrid from "./components/ProjectGrid";
@@ -11,10 +11,12 @@ function App() {
   const [courseQuery, setCourseQuery] = useState({});
   return (
     <Grid
-      gap={1.5}
+      overflow={"hidden"}
+      h="100vh"
+      gap={2}
       templateAreas={{
-        base: `"hero" "main" "footer"`,
-        md: `"nav hero" "aside hero" "aside main" "footer footer"`,
+        base: ` "main" "footer"`,
+        md: `"nav main" "aside main" "footer footer"`,
       }}
       templateColumns={{
         base: "1fr",
@@ -22,12 +24,19 @@ function App() {
       }}
     >
       <Show above="md">
-        <GridItem p={6} area="nav" bg="gray.800">
-          <Nav />
+        <GridItem borderRadius={10} p={6} area="nav" bg="gray.800">
+          <Stack h="100%" justify={"center"}>
+            <Nav />
+          </Stack>
         </GridItem>
-      </Show>
-      <Show above="md">
-        <GridItem h="min-content" py={6} pl={6} area="aside" bg="gray.800">
+        <GridItem
+          minH={"75vh"}
+          borderRadius={10}
+          py={6}
+          pl={6}
+          area="aside"
+          bg="gray.800"
+        >
           <Aside
             onSearch={searchText =>
               setCourseQuery({ ...courseQuery, searchText })
@@ -35,20 +44,24 @@ function App() {
           />
         </GridItem>
       </Show>
+
       <GridItem
-        h="min-content"
-        p={6}
-        marginBottom="-1.5"
-        area="hero"
-        bg={{ md: "gradient.xl_primary", base: "gradient.base_primary" }}
+        overflowY={"auto"}
+        borderRadius={10}
+        px={6}
+        pt={6}
+        area="main"
+        bg={{ base: "gray.900", md: "gray.800" }}
       >
-        <Hero />
-      </GridItem>
-      <GridItem p={6} area="main" bg={{ base: "gray.900", md: "gray.800" }}>
-        <ProjectGrid />
+        <Stack h="90vh" scroll spacing={20}>
+          <Hero />
+          <ProjectGrid />
+        </Stack>
       </GridItem>
       <GridItem p={6} area="footer" bg="gray.800">
-        <Footer />
+        <Stack h="100%" justify={"center"}>
+          <Footer />
+        </Stack>
       </GridItem>
     </Grid>
   );

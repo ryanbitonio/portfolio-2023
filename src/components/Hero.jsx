@@ -26,7 +26,7 @@ const Hero = () => {
       >
         <Image
           boxSize={`clamp(177px, 18vw, 221px)`}
-          filter="drop-shadow(0px 20px 85px rgba(0, 0, 0, 0.6))"
+          // filter="drop-shadow(0px 20px 85px rgba(0, 0, 0, 0.6))"
           src="src/assets/icons/Hero/hero.svg"
         />
         <Stack pl={{ base: "0", md: "5" }}>

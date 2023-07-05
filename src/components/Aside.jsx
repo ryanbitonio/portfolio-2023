@@ -12,7 +12,6 @@ import { RiAppsLine, RiAppsFill } from "react-icons/ri";
 import courses from "../../data/courses";
 import Search from "./Search";
 import { useState } from "react";
-import { color } from "framer-motion";
 
 const Aside = ({ onSearch }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);

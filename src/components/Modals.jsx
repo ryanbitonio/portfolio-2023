@@ -30,7 +30,7 @@ const Modals = () => {
       <Modal onClose={onClose} size="full" isOpen={isOpen}>
         <ModalContent>
           <ModalCloseButton
-            zIndex={999}
+            zIndex={10}
             _hover={{
               bg: "white",
               color: "gray.700",
