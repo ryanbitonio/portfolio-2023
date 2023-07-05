@@ -30,7 +30,7 @@ function App() {
           </Stack>
         </GridItem>
         <GridItem
-          minH={"75vh"}
+          minH={"70vh"}
           borderRadius={10}
           py={6}
           pl={6}
