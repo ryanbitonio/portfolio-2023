@@ -44,7 +44,7 @@ const Aside = ({ onSearch }) => {
             mb={2}
           >
             <Image objectFit="cover" src={thumbnail} alt={title} />
-            <Flex overflow="hidden" gap={1} direction={"column"}>
+            <Flex overflow="hidden" gap={1} direction="column">
               <Heading isTruncated fontSize="4xl" fontWeight="400">
                 {title}
               </Heading>

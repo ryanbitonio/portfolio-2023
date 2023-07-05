@@ -8,7 +8,7 @@ import {
 
 import { useDisclosure } from "@chakra-ui/react";
 
-const Modals = () => {
+const Reel = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -24,7 +24,7 @@ const Modals = () => {
           className="play"
           onClick={onOpen}
           cursor="pointer"
-          size={34}
+          size={55}
         />
       </Button>
       <Modal onClose={onClose} size="full" isOpen={isOpen}>
@@ -59,4 +59,4 @@ const Modals = () => {
   );
 };
 
-export default Modals;
+export default Reel;

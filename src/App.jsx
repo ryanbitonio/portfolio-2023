@@ -30,6 +30,7 @@ function App() {
           </Stack>
         </GridItem>
         <GridItem
+          overflowY={"scroll"}
           minH={"70vh"}
           borderRadius={10}
           py={6}
@@ -37,7 +38,7 @@ function App() {
           area="aside"
           bg="gray.800"
         >
-          <Box h="100%" overflowY={"scroll"}>
+          <Box h="100%">
             <Aside
               onSearch={searchText =>
                 setCourseQuery({ ...courseQuery, searchText })
@@ -47,7 +48,7 @@ function App() {
         </GridItem>
       </Show>
       <GridItem
-        overflowY={"auto"}
+        overflowY="auto"
         borderRadius={10}
         px={6}
         pt={6}
@@ -59,7 +60,7 @@ function App() {
           <ProjectGrid />
         </Stack>
       </GridItem>
-      <GridItem p={6} area="footer" bg="gray.900">
+      <GridItem mt={-1.5} p={6} area="footer" bg="gray.900">
         <Stack justify={"center"}>
           <Footer />
         </Stack>
