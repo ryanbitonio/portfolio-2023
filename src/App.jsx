@@ -54,7 +54,7 @@ function App() {
         area="main"
         bg={{ base: "gray.900", md: "gray.800" }}
       >
-        <Stack spacing={20}>
+        <Stack spacing={{ base: "10", md: "20" }}>
           <Hero />
           <ProjectGrid />
         </Stack>

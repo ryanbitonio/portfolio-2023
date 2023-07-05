@@ -49,7 +49,7 @@ const ProjectCard = ({
           borderRadius={{ base: "0", md: "5" }}
           alignSelf={"center"}
           mt={{ base: "0", md: "5" }}
-          w={{ base: "100px", md: "65%" }}
+          w={{ base: "80px", md: "65%" }}
           objectFit="cover"
           src={backgroundImage}
           alt={alt}
@@ -57,13 +57,18 @@ const ProjectCard = ({
         <Stack pl={{ base: "5", md: "0" }}>
           <CardBody p={{ base: "0", md: "5" }}>
             <Text
+              pb={{ base: "1", md: "0" }}
               fontSize={{ base: "md", md: "lg" }}
               letterSpacing="wide"
               fontWeight="bold"
             >
               {language}
             </Text>
-            <Heading py={1.5} fontSize={{ base: "3xl", md: "4xl" }} size="md">
+            <Heading
+              py={{ base: "0", md: "1.5" }}
+              fontSize={{ base: "3xl", md: "4xl" }}
+              size="md"
+            >
               {title}
             </Heading>
             <Show above="md">
@@ -76,13 +81,6 @@ const ProjectCard = ({
                 {description}
               </Text>
             </Show>
-            <Hide above="md">
-              <HStack pt={3}>
-                {Object.keys(stack).map((icon, index) => (
-                  <Icon key={index} as={iconMap[icon]} />
-                ))}
-              </HStack>
-            </Hide>
           </CardBody>
         </Stack>
       </Card>
