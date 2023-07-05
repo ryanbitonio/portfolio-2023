@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import { Grid, GridItem, Show, Flex, Box, Stack } from "@chakra-ui/react";
+import { Grid, GridItem, Show, Divider, Box, Stack } from "@chakra-ui/react";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import ProjectGrid from "./components/ProjectGrid";
@@ -30,21 +30,18 @@ function App() {
           </Stack>
         </GridItem>
         <GridItem
-          overflowY={"scroll"}
-          minH={"70vh"}
+          minH="70vh"
           borderRadius={10}
           py={6}
           pl={6}
           area="aside"
           bg="gray.800"
         >
-          <Box h="100%">
-            <Aside
-              onSearch={searchText =>
-                setCourseQuery({ ...courseQuery, searchText })
-              }
-            />
-          </Box>
+          <Aside
+            onSearch={searchText =>
+              setCourseQuery({ ...courseQuery, searchText })
+            }
+          />
         </GridItem>
       </Show>
       <GridItem
@@ -55,8 +52,9 @@ function App() {
         area="main"
         bg={{ base: "gray.900", md: "gray.800" }}
       >
-        <Stack spacing={{ base: "10", md: "20" }}>
+        <Stack spacing={7}>
           <Hero />
+          <Divider />
           <ProjectGrid />
         </Stack>
       </GridItem>

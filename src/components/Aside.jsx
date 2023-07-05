@@ -17,7 +17,7 @@ const Aside = ({ onSearch }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <Stack spacing={5}>
+    <Stack h="100%" spacing={5}>
       <HStack
         onClick={() => setSidebarOpen(!isSidebarOpen)}
         color={isSidebarOpen ? "white" : "gray.300"}
@@ -32,7 +32,7 @@ const Aside = ({ onSearch }) => {
       <Box pr={6}>
         <Search onSearch={onSearch} />
       </Box>
-      <Box mt={1}>
+      <Box overflowY="auto" mt={1}>
         {courses.map(({ id, title, description, thumbnail }) => (
           <HStack
             _hover={{
