@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Button, keyframes, useToast } from "@chakra-ui/react";
-import Tooltip from "./Tooltip";
 
 const Toast = ({ children, like }) => {
   const toast = useToast({
@@ -14,11 +13,9 @@ const Toast = ({ children, like }) => {
   });
 
   return (
-    <Tooltip placement="top" label="Add to your Favorites">
-      <span bg="red" w="min-content" onClick={toast} type="button">
-        {children}
-      </span>
-    </Tooltip>
+    <Box variant="unstyled" w="min-content" onClick={toast} type="button">
+      {children}
+    </Box>
   );
 };
 
