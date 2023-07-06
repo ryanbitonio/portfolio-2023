@@ -7,12 +7,14 @@ import {
   Heading,
   Image,
   Box,
+  IconButton,
 } from "@chakra-ui/react";
 import { RiAppsLine, RiAppsFill } from "react-icons/ri";
 import courses from "../../data/courses";
 import Search from "./Search";
 import { useState } from "react";
 import Tooltip from "./Tooltip";
+import { HiOutlineArrowSmallLeft } from "react-icons/hi2";
 
 const Aside = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -28,28 +30,38 @@ const Aside = () => {
 
   return (
     <Stack h="100%" spacing={5}>
-      <Tooltip placement="top-start" label="Collapse Your Library">
-        <HStack
-          w="max-content"
-          onClick={() => setSidebarOpen(!isSidebarOpen)}
-          color={isSidebarOpen ? "white" : "gray.300"}
-          _hover={{
-            color: "white",
-            cursor: "pointer",
-          }}
-        >
-          <Icon
-            boxSize={6}
-            mr={3}
-            as={isSidebarOpen ? RiAppsFill : RiAppsLine}
-          />
-          <Text fontWeight="semibold">My Library</Text>
-        </HStack>
-      </Tooltip>
+      <HStack justify="space-between">
+        <Tooltip placement="top-start" label="Collapse Your Library">
+          <HStack
+            w="max-content"
+            onClick={() => setSidebarOpen(!isSidebarOpen)}
+            color={isSidebarOpen ? "white" : "gray.300"}
+            _hover={{
+              color: "white",
+              cursor: "pointer",
+            }}
+          >
+            <Icon
+              boxSize={6}
+              mr={3}
+              as={isSidebarOpen ? RiAppsFill : RiAppsLine}
+            />
+            <Text fontWeight="semibold">My Library</Text>
+          </HStack>
+        </Tooltip>
+        <IconButton
+          isRound
+          bgSize="50%"
+          mr={6}
+          variant="ghost"
+          color="#B3B3B3"
+          icon={<HiOutlineArrowSmallLeft size={24} />}
+        />
+      </HStack>
       <Box pr={6}>
         <Search onInput={handleSearchChange} />
       </Box>
-      <Box overflowY="auto" mt={1}>
+      <Box overflowY="auto">
         {filteredCourses.map(({ id, title, description, thumbnail }) => (
           <HStack
             _hover={{

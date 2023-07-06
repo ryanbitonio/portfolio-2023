@@ -12,8 +12,9 @@ const Search = ({ onInput }) => {
         borderRadius={20}
         focusBorderColor="gray.600"
         fontSize="2xl"
-        type="tel"
+        type="search"
         placeholder="Search in Your Library"
+        fontWeight={300}
       />
     </InputGroup>
   );

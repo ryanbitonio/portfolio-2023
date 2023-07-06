@@ -14,7 +14,7 @@ const Toast = ({ children, like }) => {
   });
 
   return (
-    <Tooltip placement="top" label="Added to your Favorites">
+    <Tooltip placement="top" label="Add to your Favorites">
       <span bg="red" w="min-content" onClick={toast} type="button">
         {children}
       </span>
