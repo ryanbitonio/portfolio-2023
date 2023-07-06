@@ -65,6 +65,17 @@ h3,
 h4,
 h5,
 h6,
-a {
+a,
+img {
   user-select: none;
+}
+
+a,
+img,
+div {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
