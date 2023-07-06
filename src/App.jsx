@@ -36,7 +36,7 @@ function App() {
         <GridItem
           minH="70vh"
           borderRadius={10}
-          py={6}
+          pt={6}
           pl={6}
           area="aside"
           bg="gray.800"

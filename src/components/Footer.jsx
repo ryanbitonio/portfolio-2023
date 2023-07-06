@@ -13,7 +13,6 @@ import ReelThumbnail from "../assets/thumbnails/reel.png";
 import { RiHeartLine, RiHeartFill } from "react-icons/ri";
 import { useState } from "react";
 import Toast from "./Toast";
-import Tooltip from "./Tooltip";
 
 const Footer = () => {
   const [like, setLike] = useState(false);
