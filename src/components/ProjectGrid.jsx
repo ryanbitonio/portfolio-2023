@@ -31,7 +31,7 @@ const ProjectGrid = () => {
       </HStack>
 
       <SimpleGrid
-        gridTemplateColumns="repeat(auto-fit, minmax(202px, 1fr))"
+        gridTemplateColumns="repeat(auto-fit, minmax(195px, 1fr))"
         spacing={3}
       >
         {isLoading &&
