@@ -22,7 +22,7 @@ const Search = ({ onSearch }) => {
           focusBorderColor="gray.600"
           fontSize="2xl"
           type="tel"
-          placeholder="Search"
+          placeholder="Search in Your Library"
         />
       </InputGroup>
     </form>

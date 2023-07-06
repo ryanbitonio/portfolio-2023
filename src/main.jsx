@@ -18,7 +18,15 @@ const queryClient = new QueryClient({
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <ChakraProvider theme={theme}>
+      <ChakraProvider
+        toastOptions={{
+          motionVariants: {
+            enter: { transition: { duration: 0 } },
+            exit: { transition: { duration: 0 } },
+          },
+        }}
+        theme={theme}
+      >
         <CSSReset />
         <App />
         <ReactQueryDevtools />

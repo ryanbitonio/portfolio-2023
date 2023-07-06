@@ -12,23 +12,31 @@ import { RiAppsLine, RiAppsFill } from "react-icons/ri";
 import courses from "../../data/courses";
 import Search from "./Search";
 import { useState } from "react";
+import Tooltip from "./Tooltip";
 
 const Aside = ({ onSearch }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <Stack h="100%" spacing={5}>
-      <HStack
-        onClick={() => setSidebarOpen(!isSidebarOpen)}
-        color={isSidebarOpen ? "white" : "gray.300"}
-        _hover={{
-          color: "white",
-          cursor: "pointer",
-        }}
-      >
-        <Icon boxSize={6} mr={3} as={isSidebarOpen ? RiAppsFill : RiAppsLine} />
-        <Text fontWeight="semibold">My Library</Text>
-      </HStack>
+      <Tooltip placement="top-start" label="Collapse Your Library">
+        <HStack
+          w="max-content"
+          onClick={() => setSidebarOpen(!isSidebarOpen)}
+          color={isSidebarOpen ? "white" : "gray.300"}
+          _hover={{
+            color: "white",
+            cursor: "pointer",
+          }}
+        >
+          <Icon
+            boxSize={6}
+            mr={3}
+            as={isSidebarOpen ? RiAppsFill : RiAppsLine}
+          />
+          <Text fontWeight="semibold">My Library</Text>
+        </HStack>
+      </Tooltip>
       <Box pr={6}>
         <Search onSearch={onSearch} />
       </Box>

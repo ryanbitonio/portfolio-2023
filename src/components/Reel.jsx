@@ -5,7 +5,7 @@ import {
   ModalContent,
   ModalCloseButton,
 } from "@chakra-ui/react";
-
+import Tooltip from "./Tooltip";
 import { useDisclosure } from "@chakra-ui/react";
 
 const Reel = () => {
@@ -13,20 +13,22 @@ const Reel = () => {
 
   return (
     <>
-      <Button
-        _focus={{
-          boxShadow: "none",
-        }}
-        variant="link"
-        cursor="default"
-      >
-        <PiPlayCircleFill
-          className="play"
-          onClick={onOpen}
-          cursor="pointer"
-          size={50}
-        />
-      </Button>
+      <Tooltip placement="top" label="Play Video">
+        <Button
+          _focus={{
+            boxShadow: "none",
+          }}
+          variant="link"
+          cursor="default"
+        >
+          <PiPlayCircleFill
+            className="play"
+            onClick={onOpen}
+            cursor="pointer"
+            size={50}
+          />
+        </Button>
+      </Tooltip>
       <Modal onClose={onClose} size="full" isOpen={isOpen}>
         <ModalContent>
           <ModalCloseButton

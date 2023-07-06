@@ -5,7 +5,7 @@ import {
   Heading,
   Text,
   Box,
-  Divider,
+  Button,
   Show,
 } from "@chakra-ui/react";
 import Reel from "./Reel";
@@ -13,6 +13,7 @@ import ReelThumbnail from "../assets/thumbnails/reel.png";
 import { RiHeartLine, RiHeartFill } from "react-icons/ri";
 import { useState } from "react";
 import Toast from "./Toast";
+import Tooltip from "./Tooltip";
 
 const Footer = () => {
   const [like, setLike] = useState(false);
@@ -37,12 +38,14 @@ const Footer = () => {
           <Toast like={like}>
             {like ? (
               <RiHeartLine
+                cursor="pointer"
                 onClick={handleLikeClick}
                 color="#B3B3B3"
                 size={20}
               />
             ) : (
               <RiHeartFill
+                cursor="pointer"
                 onClick={handleLikeClick}
                 color="#1DB954"
                 size={20}
@@ -50,7 +53,6 @@ const Footer = () => {
             )}
           </Toast>
         </HStack>
-
         <Reel />
       </Show>
       <Text fontSize="3xl" color="#b3b3b3">
