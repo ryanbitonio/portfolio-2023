@@ -14,8 +14,17 @@ import Search from "./Search";
 import { useState } from "react";
 import Tooltip from "./Tooltip";
 
-const Aside = ({ onSearch }) => {
+const Aside = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
+
+  const handleSearchChange = event => {
+    setSearchValue(event.target.value);
+  };
+
+  const filteredCourses = courses.filter(course =>
+    course.title.toLowerCase().includes(searchValue.toLowerCase())
+  );
 
   return (
     <Stack h="100%" spacing={5}>
@@ -38,10 +47,10 @@ const Aside = ({ onSearch }) => {
         </HStack>
       </Tooltip>
       <Box pr={6}>
-        <Search onSearch={onSearch} />
+        <Search onInput={handleSearchChange} />
       </Box>
       <Box overflowY="auto" mt={1}>
-        {courses.map(({ id, title, description, thumbnail }) => (
+        {filteredCourses.map(({ id, title, description, thumbnail }) => (
           <HStack
             _hover={{
               bg: "gray.600",
