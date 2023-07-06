@@ -1,17 +1,6 @@
-import {
-  Box,
-  Flex,
-  HStack,
-  Heading,
-  Icon,
-  Image,
-  Show,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
-
-import Social from "./Social";
+import { Flex, Heading, Image, Show, Stack, Text } from "@chakra-ui/react";
 import NavButtons from "./NavButtons";
+import Social from "./Social";
 
 const Hero = () => {
   return (

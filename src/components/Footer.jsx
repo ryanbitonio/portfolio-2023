@@ -1,17 +1,8 @@
-import {
-  HStack,
-  Image,
-  Flex,
-  Heading,
-  Text,
-  Box,
-  Button,
-  Show,
-} from "@chakra-ui/react";
-import Reel from "./Reel";
-import ReelThumbnail from "../assets/thumbnails/reel.png";
-import { RiHeartLine, RiHeartFill } from "react-icons/ri";
+import { Flex, HStack, Heading, Image, Show, Text } from "@chakra-ui/react";
 import { useState } from "react";
+import { RiHeartFill, RiHeartLine } from "react-icons/ri";
+import ReelThumbnail from "../assets/thumbnails/reel.png";
+import Reel from "./Reel";
 import Toast from "./Toast";
 
 const Footer = () => {

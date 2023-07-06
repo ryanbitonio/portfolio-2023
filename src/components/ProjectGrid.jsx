@@ -1,10 +1,10 @@
 import {
-  SimpleGrid,
-  Flex,
-  Text,
   Alert,
   AlertIcon,
+  Flex,
   HStack,
+  SimpleGrid,
+  Text,
 } from "@chakra-ui/react";
 import useProjects from "../hooks/useProjects";
 import ProjectCard from "./ProjectCard";

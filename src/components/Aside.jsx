@@ -1,20 +1,20 @@
 import {
-  HStack,
-  Icon,
-  Text,
-  Flex,
-  Stack,
-  Heading,
-  Image,
   Box,
+  Flex,
+  HStack,
+  Heading,
+  Icon,
   IconButton,
+  Image,
+  Stack,
+  Text,
 } from "@chakra-ui/react";
-import { RiAppsLine, RiAppsFill } from "react-icons/ri";
+import { useState } from "react";
+import { HiOutlineArrowSmallLeft } from "react-icons/hi2";
+import { RiAppsFill, RiAppsLine } from "react-icons/ri";
 import courses from "../../data/courses";
 import Search from "./Search";
-import { useState } from "react";
 import Tooltip from "./Tooltip";
-import { HiOutlineArrowSmallLeft } from "react-icons/hi2";
 
 const Aside = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);

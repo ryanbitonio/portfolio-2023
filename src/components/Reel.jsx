@@ -1,12 +1,12 @@
-import { PiPlayCircleFill } from "react-icons/pi";
 import {
   Button,
   Modal,
-  ModalContent,
   ModalCloseButton,
+  ModalContent,
+  useDisclosure,
 } from "@chakra-ui/react";
+import { PiPlayCircleFill } from "react-icons/pi";
 import Tooltip from "./Tooltip";
-import { useDisclosure } from "@chakra-ui/react";
 
 const Reel = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();

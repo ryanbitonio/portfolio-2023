@@ -1,4 +1,4 @@
-import { List, ListItem, ListIcon, Link, HStack, Flex } from "@chakra-ui/react";
+import { Link, List, ListIcon, ListItem } from "@chakra-ui/react";
 import { useState } from "react";
 import menuList from "../../data/menu";
 

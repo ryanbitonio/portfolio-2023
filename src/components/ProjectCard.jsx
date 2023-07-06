@@ -1,35 +1,22 @@
 import {
   Card,
   CardBody,
-  Image,
-  Stack,
   Heading,
-  Text,
-  CardFooter,
-  Icon,
-  HStack,
-  Show,
-  CardHeader,
-  Hide,
+  Image,
   Link,
+  Show,
+  Stack,
+  Text,
 } from "@chakra-ui/react";
-import { SiJavascript, SiReact, SiChakraui } from "react-icons/si";
 
 const ProjectCard = ({
   title,
   description,
   backgroundImage,
-  stack,
   language,
   alt,
   url,
 }) => {
-  const iconMap = {
-    javascript: SiJavascript,
-    react: SiReact,
-    chakra: SiChakraui,
-  };
-
   return (
     <Link _hover={{ textDecoration: "none" }} href={url} isExternal>
       <Card

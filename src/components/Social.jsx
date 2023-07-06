@@ -1,5 +1,4 @@
-import { HStack, Flex, Link } from "@chakra-ui/react";
-
+import { Flex, HStack, Link } from "@chakra-ui/react";
 import { HiOutlineExternalLink } from "react-icons/hi";
 
 const Social = () => {

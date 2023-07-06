@@ -1,11 +1,11 @@
-import "./App.css";
+import { Divider, Grid, GridItem, Show, Stack } from "@chakra-ui/react";
 import { useState } from "react";
-import { Grid, GridItem, Show, Divider, Box, Stack } from "@chakra-ui/react";
-import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-import ProjectGrid from "./components/ProjectGrid";
+import "./App.css";
 import Aside from "./components/Aside";
 import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import Nav from "./components/Nav";
+import ProjectGrid from "./components/ProjectGrid";
 
 function App() {
   const [courseQuery, setCourseQuery] = useState({});

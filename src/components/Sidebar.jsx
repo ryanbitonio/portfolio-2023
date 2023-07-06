@@ -1,7 +1,7 @@
-import { List, ListItem, ListIcon, Stack, Box, Icon } from "@chakra-ui/react";
-import { ReactComponent as HomeIcon } from "../assets/icons/Nav/home.svg";
-import { ReactComponent as ExperienceIcon } from "../assets/icons/Nav/experience.svg";
+import { List, ListIcon, ListItem } from "@chakra-ui/react";
 import { ReactComponent as ConnectIcon } from "../assets/icons/Nav/connect.svg";
+import { ReactComponent as ExperienceIcon } from "../assets/icons/Nav/experience.svg";
+import { ReactComponent as HomeIcon } from "../assets/icons/Nav/home.svg";
 
 const Nav = ({ isSidebarOpen }) => {
   return (
