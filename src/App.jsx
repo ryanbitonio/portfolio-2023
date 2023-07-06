@@ -11,7 +11,7 @@ function App() {
   const [courseQuery, setCourseQuery] = useState({});
   return (
     <Grid
-      overflow={"hidden"}
+      overflow="hidden"
       h="100vh"
       gap={2}
       templateAreas={{
@@ -22,10 +22,14 @@ function App() {
         base: "1fr",
         md: "0.3fr 1fr",
       }}
+      templateRows={{
+        base: "1fr",
+        md: "auto 1fr auto",
+      }}
     >
       <Show above="md">
         <GridItem borderRadius={10} p={6} area="nav" bg="gray.800">
-          <Stack h="100%" justify={"center"}>
+          <Stack h="100%" justify="center">
             <Nav />
           </Stack>
         </GridItem>
