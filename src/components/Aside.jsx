@@ -12,11 +12,9 @@ import { useState } from "react";
 import { RiAppsFill, RiAppsLine } from "react-icons/ri";
 import courses from "../../data/courses";
 import Search from "./Search";
-import Tooltip from "./Tooltip";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Aside = () => {
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [searchValue, setSearchValue] = useState("");
 
   const handleSearchChange = event => {
@@ -30,24 +28,10 @@ const Aside = () => {
   return (
     <Stack h="100%" w="100%" spacing={5}>
       <HStack justify="space-between">
-        <Tooltip placement="top-start" label="Collapse Your Library">
-          <HStack
-            w="max-content"
-            onClick={() => setSidebarOpen(!isSidebarOpen)}
-            color={isSidebarOpen ? "white" : "gray.300"}
-            _hover={{
-              color: "white",
-              cursor: "pointer",
-            }}
-          >
-            <Icon
-              boxSize={6}
-              mr={3}
-              as={isSidebarOpen ? RiAppsFill : RiAppsLine}
-            />
-            <Text fontWeight="semibold">My Library</Text>
-          </HStack>
-        </Tooltip>
+        <HStack w="max-content" color="gray.300">
+          <Icon boxSize={6} mr={3} as={RiAppsLine} />
+          <Text fontWeight="semibold">My Library</Text>
+        </HStack>
       </HStack>
       <Box pr={6}>
         <Search onInput={handleSearchChange} />

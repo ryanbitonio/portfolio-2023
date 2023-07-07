@@ -1,5 +1,5 @@
 import { Tooltip } from "@chakra-ui/react";
-const CustomTooltip = ({ label, children, placement, onClose }) => {
+const CustomTooltip = ({ label, children, placement }) => {
   return (
     <Tooltip
       label={label}
@@ -9,7 +9,6 @@ const CustomTooltip = ({ label, children, placement, onClose }) => {
       color="white"
       bg="gray.600"
       openDelay={300}
-      onClose={onClose}
     >
       {children}
     </Tooltip>

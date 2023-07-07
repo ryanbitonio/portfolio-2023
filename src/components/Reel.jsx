@@ -6,29 +6,29 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { PiPlayCircleFill } from "react-icons/pi";
-import Tooltip from "./Tooltip";
+// import Tooltip from "./Tooltip";
 
 const Reel = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
-      <Tooltip placement="top" label="Play Video">
-        <Button
-          _focus={{
-            boxShadow: "none",
-          }}
-          variant="link"
-          cursor="default"
-        >
-          <PiPlayCircleFill
-            className="play"
-            onClick={onOpen}
-            cursor="pointer"
-            size={50}
-          />
-        </Button>
-      </Tooltip>
+      {/* <Tooltip placement="top" label="Play Video"> */}
+      <Button
+        _focus={{
+          boxShadow: "none",
+        }}
+        variant="link"
+        cursor="default"
+      >
+        <PiPlayCircleFill
+          className="play"
+          onClick={onOpen}
+          cursor="pointer"
+          size={50}
+        />
+      </Button>
+      {/* </Tooltip> */}
       <Modal onClose={onClose} size="full" isOpen={isOpen}>
         <ModalContent>
           <ModalCloseButton
