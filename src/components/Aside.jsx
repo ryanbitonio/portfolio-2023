@@ -4,13 +4,11 @@ import {
   HStack,
   Heading,
   Icon,
-  IconButton,
   Image,
   Stack,
   Text,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { HiOutlineArrowSmallLeft } from "react-icons/hi2";
 import { RiAppsFill, RiAppsLine } from "react-icons/ri";
 import courses from "../../data/courses";
 import Search from "./Search";
@@ -49,19 +47,11 @@ const Aside = () => {
             <Text fontWeight="semibold">My Library</Text>
           </HStack>
         </Tooltip>
-        <IconButton
-          isRound
-          bgSize="50%"
-          mr={6}
-          variant="ghost"
-          color="#B3B3B3"
-          icon={<HiOutlineArrowSmallLeft size={24} />}
-        />
       </HStack>
       <Box pr={6}>
         <Search onInput={handleSearchChange} />
       </Box>
-      <Box overflowY="auto">
+      <Box overflowY="auto" mt={1}>
         {filteredCourses.map(({ id, title, description, thumbnail }) => (
           <HStack
             _hover={{

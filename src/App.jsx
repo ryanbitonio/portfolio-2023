@@ -1,4 +1,4 @@
-import { Divider, Grid, GridItem, Show, Stack } from "@chakra-ui/react";
+import { Grid, GridItem, Show, Stack, Box } from "@chakra-ui/react";
 import { useState } from "react";
 import "./App.css";
 import Aside from "./components/Aside";
@@ -51,15 +51,20 @@ function App() {
       <GridItem
         overflowY="auto"
         borderRadius={10}
-        px={6}
-        pt={6}
         area="main"
         bg={{ base: "gray.900", md: "gray.800" }}
       >
         <Stack spacing={7}>
-          <Hero />
-          <Divider />
-          <ProjectGrid />
+          <Box
+            bg="linear-gradient(180deg, rgba(131, 131, 131, 0.8) -7.68%, rgba(44, 85, 72, 0) 117.6%)"
+            px={6}
+            py={6}
+          >
+            <Hero />
+          </Box>
+          <Box px={6}>
+            <ProjectGrid />
+          </Box>
         </Stack>
       </GridItem>
       <GridItem h="10vh" mt={-1.5} p={6} area="footer" bg="gray.900">

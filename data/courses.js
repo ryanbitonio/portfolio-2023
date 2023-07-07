@@ -50,22 +50,22 @@ export default [
   },
   {
     id: 8,
-    title: "The Creative HTML5 & CSS3 Course",
-    description: "Course - developedbyed",
+    title: "Dummy Course",
+    description: "Course - dummy",
     thumbnail:
       "https://res.cloudinary.com/dyeritf60/image/upload/v1688279175/html-css_e0rcqk.png",
   },
   {
     id: 9,
-    title: "Conquering Responsive Layouts",
-    description: "Course - Kevin Powell",
+    title: "Dummy Course",
+    description: "Course - dummy",
     thumbnail:
       "https://res.cloudinary.com/dyeritf60/image/upload/v1688279175/responsive-layout_qeafwv.png",
   },
   {
     id: 10,
-    title: "JavaScript Simplified",
-    description: "Course - Kyle Cook",
+    title: "Dummy Course",
+    description: "Course - dummy",
     thumbnail:
       "https://res.cloudinary.com/dyeritf60/image/upload/v1688279175/js-simplified_pe4jsl.png",
   },
