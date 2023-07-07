@@ -9,6 +9,7 @@ import {
 import useProjects from "../hooks/useProjects";
 import ProjectCard from "./ProjectCard";
 import ProjectCardSkeleton from "./ProjectCardSkeleton";
+import { motion } from "framer-motion";
 
 const ProjectGrid = () => {
   const { data: projects, error, isLoading } = useProjects();
