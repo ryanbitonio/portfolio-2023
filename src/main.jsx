@@ -6,6 +6,8 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import theme from "./theme";
+import { RouterProvider } from "react-router-dom";
+import router from "./route/routes.jsx";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -28,7 +30,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         theme={theme}
       >
         <CSSReset />
-        <App />
+        <RouterProvider router={router} />
         <ReactQueryDevtools />
       </ChakraProvider>
     </QueryClientProvider>
