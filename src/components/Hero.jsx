@@ -1,13 +1,19 @@
 import { Flex, Heading, Image, Show, Stack, Text } from "@chakra-ui/react";
 import NavButtons from "./NavButtons";
 import Social from "./Social";
+import Menu from "./Menu";
 
 const Hero = () => {
   return (
     <Stack>
-      <Show above="md">
-        <NavButtons />
-      </Show>
+      <Flex justify="space-between">
+        <Show above="md">
+          <NavButtons />
+        </Show>
+        <Show below="md">
+          <Menu />
+        </Show>
+      </Flex>
       <Flex
         pt={7}
         direction={{ base: "column", md: "row" }}

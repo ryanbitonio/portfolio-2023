@@ -29,7 +29,7 @@ const Home = () => {
       <Show above="md">
         <GridItem borderRadius={10} p={6} area="nav" bg="gray.800">
           <Stack h="100%" justify="center">
-            <Nav />
+            <Nav spacing={3} />
           </Stack>
         </GridItem>
         <GridItem
@@ -56,8 +56,7 @@ const Home = () => {
         <Stack spacing={7}>
           <Box
             bg="linear-gradient(180deg, rgba(131, 131, 131, 0.8) -7.68%, rgba(44, 85, 72, 0) 117.6%)"
-            px={6}
-            py={6}
+            p={6}
           >
             <Hero />
           </Box>
