@@ -67,11 +67,11 @@ const Home = ({
         </GridItem>
       </Show>
       <GridItem overflowY="auto" borderRadius={10} area="main" bg={secondaryBg}>
-        <Stack spacing={7}>
-          <Box minH="min-content" p={6} bg={heroBg}>
+        <Stack>
+          <Box p={6} bg={heroBg}>
             <Hero tertiaryColor={tertiaryColor} />
           </Box>
-          <Box px={6}>
+          <Box p={6}>
             <ProjectGrid color={color} secondaryColor={secondaryColor} />
           </Box>
         </Stack>

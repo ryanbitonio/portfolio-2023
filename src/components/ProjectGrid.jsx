@@ -31,7 +31,13 @@ const ProjectGrid = ({ color, secondaryColor }) => {
       </HStack>
 
       <SimpleGrid
-        gridTemplateColumns="repeat(auto-fit, minmax(195px, 1fr))"
+        // gridTemplateColumns="repeat(auto-fit, minmax(195px, 1fr))"
+        gridTemplateColumns={{
+          base: "repeat(auto-fit, minmax(195px, 1fr))",
+          md: "repeat(auto-fit, minmax(165px, 1fr))",
+          lg: "repeat(auto-fit, minmax(185px, 1fr))",
+          xl: "repeat(auto-fit, minmax(195px, 1fr))",
+        }}
         spacing={3}
       >
         {isLoading &&

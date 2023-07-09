@@ -4,12 +4,14 @@ import {
   ModalCloseButton,
   ModalContent,
   useDisclosure,
+  useColorMode,
 } from "@chakra-ui/react";
 import { PiPlayCircleFill } from "react-icons/pi";
 // import Tooltip from "./Tooltip";
 
 const Reel = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { colorMode } = useColorMode();
 
   return (
     <>
@@ -25,6 +27,7 @@ const Reel = () => {
           onClick={onOpen}
           cursor="pointer"
           size={50}
+          color={colorMode === "dark" ? "white" : "black"}
         />
       </Button>
       <Modal onClose={onClose} size="full" isOpen={isOpen}>
