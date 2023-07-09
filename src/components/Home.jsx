@@ -6,10 +6,21 @@ import Hero from "./Hero";
 import Nav from "./Nav";
 import ProjectGrid from "./ProjectGrid";
 
-const Home = ({ bg, mainBg, footerBg, cardBg, cardHover, color }) => {
+const Home = ({
+  color,
+  secondaryColor,
+  tertiaryColor,
+  bg,
+  secondaryBg,
+  tertiaryBg,
+  navColor,
+}) => {
   const [courseQuery, setCourseQuery] = useState({});
+
   return (
     <Grid
+      bg={bg}
+      color={color}
       overflow="hidden"
       h="100vh"
       gap={2}
@@ -27,9 +38,13 @@ const Home = ({ bg, mainBg, footerBg, cardBg, cardHover, color }) => {
       }}
     >
       <Show above="md">
-        <GridItem borderRadius={10} p={6} area="nav" bg={mainBg}>
+        <GridItem borderRadius={10} p={6} area="nav" bg={secondaryBg}>
           <Stack h="100%" justify="center">
-            <Nav color={color} spacing={3} />
+            <Nav
+              tertiaryColor={tertiaryColor}
+              navColor={navColor}
+              spacing={3}
+            />
           </Stack>
         </GridItem>
         <GridItem
@@ -38,27 +53,30 @@ const Home = ({ bg, mainBg, footerBg, cardBg, cardHover, color }) => {
           pt={6}
           pl={6}
           area="aside"
-          bg={mainBg}
+          bg={secondaryBg}
         >
           <Aside
+            secondaryBg={secondaryBg}
+            tertiaryBg={tertiaryBg}
+            secondaryColor={secondaryColor}
             onSearch={searchText =>
               setCourseQuery({ ...courseQuery, searchText })
             }
           />
         </GridItem>
       </Show>
-      <GridItem overflowY="auto" borderRadius={10} area="main" bg={mainBg}>
+      <GridItem overflowY="auto" borderRadius={10} area="main" bg={secondaryBg}>
         <Stack spacing={7}>
-          <Box bg={mainBg} p={6}>
-            <Hero />
+          <Box p={6}>
+            <Hero tertiaryColor={tertiaryColor} />
           </Box>
           <Box px={6}>
-            <ProjectGrid />
+            <ProjectGrid color={color} secondaryColor={secondaryColor} />
           </Box>
         </Stack>
       </GridItem>
-      <GridItem h="10vh" mt={-1.5} p={6} area="footer" bg={footerBg}>
-        <Footer />
+      <GridItem h="10vh" mt={-1.5} p={6} area="footer" bg={bg}>
+        <Footer color={color} secondaryColor={secondaryColor} />
       </GridItem>
     </Grid>
   );

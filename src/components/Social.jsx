@@ -1,17 +1,20 @@
-import { Flex, HStack, Link } from "@chakra-ui/react";
+import { Flex, HStack, Link, useColorMode } from "@chakra-ui/react";
 import { HiOutlineExternalLink } from "react-icons/hi";
 
-const Social = () => {
+const Social = ({ tertiaryColor }) => {
+  const { colorMode } = useColorMode();
+  const hoverColor = colorMode === "dark" ? "white" : "gray.800";
+
   return (
     <HStack
       justify={{ base: "center", md: "flex-start" }}
       fontSize="2xl"
-      color="gray.300"
+      color={tertiaryColor}
       spacing={5}
     >
       <Link
         _hover={{
-          color: "white",
+          color: hoverColor,
         }}
         href="https://www.facebook.com/ryan.bitonio/"
         isExternal
@@ -23,7 +26,7 @@ const Social = () => {
       </Link>
       <Link
         _hover={{
-          color: "white",
+          color: hoverColor,
         }}
         href="https://github.com/ryanbitonio"
         isExternal

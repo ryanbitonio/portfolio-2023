@@ -7,6 +7,7 @@ import {
   Show,
   Stack,
   Text,
+  useColorMode,
 } from "@chakra-ui/react";
 
 const ProjectCard = ({
@@ -16,10 +17,17 @@ const ProjectCard = ({
   language,
   alt,
   url,
+  color,
+  secondaryColor,
 }) => {
+  const { colorMode } = useColorMode();
+  const hoverColor = colorMode === "dark" ? "gray.500" : "#fcfcfc";
+  const cardBg = colorMode === "dark" ? "gray.700" : "#ececec";
+
   return (
     <Link _hover={{ textDecoration: "none" }} href={url} isExternal>
       <Card
+        bg={cardBg}
         h="100%"
         direction={{ base: "row", md: "column" }}
         align={{ base: "center", md: "flex-start" }}
@@ -29,7 +37,7 @@ const ProjectCard = ({
           cursor: "pointer",
           boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
           transform: "translateY(-2px)",
-          bg: "gray.600",
+          bg: hoverColor,
         }}
       >
         <Image
@@ -41,7 +49,7 @@ const ProjectCard = ({
           src={backgroundImage}
           alt={alt}
         />
-        <Stack pl={{ base: "5", md: "0" }}>
+        <Stack color={color} pl={{ base: "5", md: "0" }}>
           <CardBody p={{ base: "0", md: "5" }}>
             <Text
               pb={{ base: "1", md: "0" }}
@@ -63,7 +71,7 @@ const ProjectCard = ({
                 fontSize="3xl"
                 fontWeight="300"
                 lineHeight="18px"
-                opacity="60%"
+                color={secondaryColor}
               >
                 {description}
               </Text>

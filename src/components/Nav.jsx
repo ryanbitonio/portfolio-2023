@@ -6,25 +6,27 @@ import {
   Hide,
   Center,
   useBreakpointValue,
+  useColorMode,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import menuList from "../../data/menu";
 
-const Nav = ({ spacing, fontSize, color }) => {
+const Nav = ({ spacing, fontSize, tertiaryColor, navColor }) => {
   const [selectedMenu, setSelectedMenu] = useState(1);
   const isMobile = useBreakpointValue({ base: true, md: false });
+  const { colorMode } = useColorMode();
 
   const handleMenuClick = id => setSelectedMenu(id);
+  const hoverColor = colorMode === "dark" ? "white" : "gray.800";
 
   return (
-    <List size="lg" spacing={spacing}>
+    <List size="lg" spacing={spacing} color={tertiaryColor}>
       {menuList.map(({ id, title, icon, activeIcon }, index) => (
         <ListItem
-          color={color}
           fontSize={fontSize}
           key={index}
           _hover={{
-            color: "white",
+            color: hoverColor,
           }}
         >
           {isMobile ? (
@@ -32,7 +34,7 @@ const Nav = ({ spacing, fontSize, color }) => {
               <Link
                 display="flex"
                 alignItems="center"
-                color={selectedMenu === id ? "white" : "default"}
+                color={selectedMenu === id ? navColor : "default"}
                 _hover={{
                   textDecoration: "none",
                 }}
@@ -51,7 +53,7 @@ const Nav = ({ spacing, fontSize, color }) => {
             <Link
               display="flex"
               alignItems="center"
-              color={selectedMenu === id ? "white" : "default"}
+              color={selectedMenu === id ? navColor : "default"}
               _hover={{
                 textDecoration: "none",
               }}

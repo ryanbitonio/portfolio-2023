@@ -5,7 +5,7 @@ import ReelThumbnail from "../assets/thumbnails/reel.png";
 import Reel from "./Reel";
 import Toast from "./Toast";
 
-const Footer = () => {
+const Footer = ({ color, secondaryColor }) => {
   const [like, setLike] = useState(false);
 
   const handleLikeClick = () => {
@@ -18,10 +18,10 @@ const Footer = () => {
         <HStack>
           <Image pr={3} src={ReelThumbnail} />
           <Flex pr={5} direction="column" gap={1}>
-            <Heading fontSize="3xl" fontWeight="400">
+            <Heading fontSize="3xl" fontWeight="400" color={color}>
               Demo Reel
             </Heading>
-            <Text fontSize="2xl" fontWeight="300" opacity="60%">
+            <Text fontSize="2xl" fontWeight="300" color={secondaryColor}>
               ayang
             </Text>
           </Flex>
@@ -30,7 +30,7 @@ const Footer = () => {
               <RiHeartLine
                 cursor="pointer"
                 onClick={handleLikeClick}
-                color="#B3B3B3"
+                color="gray.300"
                 size={20}
               />
             ) : (
@@ -45,7 +45,7 @@ const Footer = () => {
         </HStack>
         <Reel />
       </Show>
-      <Text fontSize="3xl" color="#b3b3b3">
+      <Text fontSize="3xl" color={secondaryColor}>
         Designed and developed by me
       </Text>
     </HStack>

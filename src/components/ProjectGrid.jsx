@@ -10,7 +10,7 @@ import useProjects from "../hooks/useProjects";
 import ProjectCard from "./ProjectCard";
 import ProjectCardSkeleton from "./ProjectCardSkeleton";
 
-const ProjectGrid = () => {
+const ProjectGrid = ({ color, secondaryColor }) => {
   const { data: projects, error, isLoading } = useProjects();
   const skeletons = [...Array(11).keys()].map(i => i + 1);
 
@@ -38,6 +38,8 @@ const ProjectGrid = () => {
           skeletons.map(skeleton => <ProjectCardSkeleton key={skeleton} />)}
         {projects?.map(project => (
           <ProjectCard
+            color={color}
+            secondaryColor={secondaryColor}
             key={project.id}
             title={project.title}
             description={project.description}

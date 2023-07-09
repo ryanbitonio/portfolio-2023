@@ -13,7 +13,6 @@ const Reel = () => {
 
   return (
     <>
-      {/* <Tooltip placement="top" label="Play Video"> */}
       <Button
         _focus={{
           boxShadow: "none",
@@ -28,7 +27,6 @@ const Reel = () => {
           size={50}
         />
       </Button>
-      {/* </Tooltip> */}
       <Modal onClose={onClose} size="full" isOpen={isOpen}>
         <ModalContent>
           <ModalCloseButton

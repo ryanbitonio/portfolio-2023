@@ -9,7 +9,7 @@ const sizes = {
     container: {},
     item: {
       fontWeight: "semibold",
-      color: "gray.300",
+      // color: "gray.300",
     },
     icon: {
       mr: 5,

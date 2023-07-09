@@ -4,7 +4,7 @@ import Social from "./Social";
 import Menu from "./Menu";
 import ColorSwitch from "./ColorSwitch";
 
-const Hero = () => {
+const Hero = ({ tertiaryColor }) => {
   return (
     <Stack>
       <Flex justify="space-between">
@@ -40,7 +40,7 @@ const Hero = () => {
           >
             Ryan Bitonio
           </Heading>
-          <Social />
+          <Social tertiaryColor={tertiaryColor} />
         </Stack>
       </Flex>
     </Stack>
