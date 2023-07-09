@@ -1,4 +1,12 @@
-import { Flex, Heading, Image, Show, Stack, Text } from "@chakra-ui/react";
+import {
+  Flex,
+  Heading,
+  Hide,
+  Image,
+  Show,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import NavButtons from "./NavButtons";
 import Social from "./Social";
 import Menu from "./Menu";
@@ -10,11 +18,15 @@ const Hero = ({ tertiaryColor }) => {
       <Flex justify="space-between">
         <Show above="md">
           <NavButtons />
-          <ColorSwitch />
         </Show>
-        <Show below="md">
-          <Menu />
-        </Show>
+        <Flex gap={3}>
+          <Show>
+            <ColorSwitch />
+          </Show>
+          <Hide above="md">
+            <Menu />
+          </Hide>
+        </Flex>
       </Flex>
       <Flex
         pt={{ base: "0", md: "7" }}
@@ -23,7 +35,7 @@ const Hero = ({ tertiaryColor }) => {
       >
         <Image
           mb={{ base: "3", md: "0" }}
-          boxSize={`clamp(177px, 18vw, 221px)`}
+          boxSize={`clamp(160px, 18vw, 221px)`}
           // filter="drop-shadow(0px 20px 85px rgba(0, 0, 0, 0.6))"
           src="src/assets/icons/Hero/hero.svg"
         />

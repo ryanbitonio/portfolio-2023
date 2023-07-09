@@ -13,6 +13,7 @@ const Home = ({
   bg,
   secondaryBg,
   tertiaryBg,
+  heroBg,
   navColor,
 }) => {
   const [courseQuery, setCourseQuery] = useState({});
@@ -67,7 +68,7 @@ const Home = ({
       </Show>
       <GridItem overflowY="auto" borderRadius={10} area="main" bg={secondaryBg}>
         <Stack spacing={7}>
-          <Box p={6}>
+          <Box minH="min-content" p={6} bg={heroBg}>
             <Hero tertiaryColor={tertiaryColor} />
           </Box>
           <Box px={6}>
