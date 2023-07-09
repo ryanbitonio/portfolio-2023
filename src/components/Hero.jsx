@@ -15,11 +15,12 @@ const Hero = () => {
         </Show>
       </Flex>
       <Flex
-        pt={7}
+        pt={{ base: "0", md: "7" }}
         direction={{ base: "column", md: "row" }}
         align={{ base: "center", md: "center" }}
       >
         <Image
+          mb={{ base: "3", md: "0" }}
           boxSize={`clamp(177px, 18vw, 221px)`}
           // filter="drop-shadow(0px 20px 85px rgba(0, 0, 0, 0.6))"
           src="src/assets/icons/Hero/hero.svg"
