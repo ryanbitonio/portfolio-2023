@@ -10,7 +10,7 @@ import {
 import { useState } from "react";
 import menuList from "../../data/menu";
 
-const Nav = ({ spacing, fontSize }) => {
+const Nav = ({ spacing, fontSize, color }) => {
   const [selectedMenu, setSelectedMenu] = useState(1);
   const isMobile = useBreakpointValue({ base: true, md: false });
 
@@ -20,6 +20,7 @@ const Nav = ({ spacing, fontSize }) => {
     <List size="lg" spacing={spacing}>
       {menuList.map(({ id, title, icon, activeIcon }, index) => (
         <ListItem
+          color={color}
           fontSize={fontSize}
           key={index}
           _hover={{

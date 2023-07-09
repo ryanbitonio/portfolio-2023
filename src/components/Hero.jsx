@@ -2,6 +2,7 @@ import { Flex, Heading, Image, Show, Stack, Text } from "@chakra-ui/react";
 import NavButtons from "./NavButtons";
 import Social from "./Social";
 import Menu from "./Menu";
+import ColorSwitch from "./ColorSwitch";
 
 const Hero = () => {
   return (
@@ -9,6 +10,7 @@ const Hero = () => {
       <Flex justify="space-between">
         <Show above="md">
           <NavButtons />
+          <ColorSwitch />
         </Show>
         <Show below="md">
           <Menu />

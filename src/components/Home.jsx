@@ -6,7 +6,7 @@ import Hero from "./Hero";
 import Nav from "./Nav";
 import ProjectGrid from "./ProjectGrid";
 
-const Home = () => {
+const Home = ({ bg, mainBg, footerBg, cardBg, cardHover, color }) => {
   const [courseQuery, setCourseQuery] = useState({});
   return (
     <Grid
@@ -27,9 +27,9 @@ const Home = () => {
       }}
     >
       <Show above="md">
-        <GridItem borderRadius={10} p={6} area="nav" bg="gray.800">
+        <GridItem borderRadius={10} p={6} area="nav" bg={mainBg}>
           <Stack h="100%" justify="center">
-            <Nav spacing={3} />
+            <Nav color={color} spacing={3} />
           </Stack>
         </GridItem>
         <GridItem
@@ -38,7 +38,7 @@ const Home = () => {
           pt={6}
           pl={6}
           area="aside"
-          bg="gray.800"
+          bg={mainBg}
         >
           <Aside
             onSearch={searchText =>
@@ -47,17 +47,9 @@ const Home = () => {
           />
         </GridItem>
       </Show>
-      <GridItem
-        overflowY="auto"
-        borderRadius={10}
-        area="main"
-        bg={{ base: "gray.900", md: "gray.800" }}
-      >
+      <GridItem overflowY="auto" borderRadius={10} area="main" bg={mainBg}>
         <Stack spacing={7}>
-          <Box
-            bg="linear-gradient(180deg, rgba(131, 131, 131, 0.8) -7.68%, rgba(44, 85, 72, 0) 117.6%)"
-            p={6}
-          >
+          <Box bg={mainBg} p={6}>
             <Hero />
           </Box>
           <Box px={6}>
@@ -65,7 +57,7 @@ const Home = () => {
           </Box>
         </Stack>
       </GridItem>
-      <GridItem h="10vh" mt={-1.5} p={6} area="footer" bg="gray.900">
+      <GridItem h="10vh" mt={-1.5} p={6} area="footer" bg={footerBg}>
         <Footer />
       </GridItem>
     </Grid>

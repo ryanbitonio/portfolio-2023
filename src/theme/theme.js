@@ -1,6 +1,10 @@
 import { extendTheme } from "@chakra-ui/react";
 import { listTheme as List } from "./components/listStyles";
 
+const config = {
+  initialColorMode: "dark",
+};
+
 const theme = extendTheme({
   fonts: {
     heading: `'Circular', sans-serif`,
@@ -60,6 +64,7 @@ const theme = extendTheme({
   components: {
     List,
   },
+  config,
 });
 
 export default theme;
