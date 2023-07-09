@@ -42,6 +42,7 @@ const Reel = () => {
               boxShadow: "none",
             }}
             bg="gray.700"
+            color="white"
           />
           <video
             onEnded={() => onClose()}

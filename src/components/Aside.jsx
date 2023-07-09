@@ -34,7 +34,7 @@ const Aside = ({ color, secondaryColor, tertiaryBg }) => {
       <HStack justify="space-between">
         <HStack w="max-content" color={secondaryColor}>
           <Icon boxSize={6} mr={3} as={RiAppsLine} />
-          <Text fontWeight="semibold">My Library</Text>
+          <Text fontWeight="700">My Library</Text>
         </HStack>
       </HStack>
       <Box pr={6}>
@@ -62,7 +62,7 @@ const Aside = ({ color, secondaryColor, tertiaryBg }) => {
                 <Heading
                   isTruncated
                   fontSize="4xl"
-                  fontWeight="400"
+                  fontWeight="600"
                   color={color}
                 >
                   {title}

@@ -23,6 +23,7 @@ const Nav = ({ spacing, fontSize, tertiaryColor, navColor }) => {
     <List size="lg" spacing={spacing} color={tertiaryColor}>
       {menuList.map(({ id, title, icon, activeIcon }, index) => (
         <ListItem
+          fontWeight="700"
           fontSize={fontSize}
           key={index}
           _hover={{
