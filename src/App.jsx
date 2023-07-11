@@ -7,7 +7,7 @@ const App = () => {
   const secondaryBg = useColorModeValue("gray.100", "gray.800");
   const tertiaryBg = useColorModeValue("#ececec", "gray.700");
   const heroBg = useColorModeValue(
-    "linear-gradient(180deg, rgba(101, 101, 101, 0) -42.04%, rgba(68, 68, 68, 0.055)4.05%)",
+    "linear-gradient(180deg, #FFFFFF, #e7e7e7)",
     "linear-gradient(180deg, rgba(131, 131, 131, 0.8) -7.68%, rgba(44, 85, 72, 0) 117.6%)"
   );
   const color = useColorModeValue("gray.600", "gray.100");

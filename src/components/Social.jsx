@@ -8,31 +8,34 @@ const Social = ({ tertiaryColor }) => {
   return (
     <HStack
       justify={{ base: "center", md: "flex-start" }}
-      fontSize="2xl"
       color={tertiaryColor}
       spacing={5}
     >
       <Link
+        fontSize="2xl"
+        fontWeight="semibold"
         _hover={{
           color: hoverColor,
         }}
         href="https://www.facebook.com/ryan.bitonio/"
         isExternal
       >
-        <Flex>
-          <HiOutlineExternalLink style={{ marginRight: "13" }} size={18} />
+        <Flex alignItems="center">
+          <HiOutlineExternalLink style={{ marginRight: "13" }} size={13} />
           Facebook
         </Flex>
       </Link>
       <Link
+        fontSize="2xl"
+        fontWeight="semibold"
         _hover={{
           color: hoverColor,
         }}
         href="https://github.com/ryanbitonio"
         isExternal
       >
-        <Flex>
-          <HiOutlineExternalLink size={18} style={{ marginRight: "13" }} />
+        <Flex alignItems="center">
+          <HiOutlineExternalLink size={13} style={{ marginRight: "13" }} />
           Github
         </Flex>
       </Link>

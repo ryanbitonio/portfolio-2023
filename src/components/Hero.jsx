@@ -34,8 +34,9 @@ const Hero = ({ tertiaryColor }) => {
         align={{ base: "center", md: "center" }}
       >
         <Image
+          borderRadius="full"
           mb={{ base: "3", md: "0" }}
-          boxSize={`clamp(160px, 18vw, 221px)`}
+          boxSize={`clamp(160px, 18vw, 235px)`}
           // filter="drop-shadow(0px 20px 85px rgba(0, 0, 0, 0.6))"
           src="src/assets/icons/Hero/hero.svg"
         />

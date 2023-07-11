@@ -10,13 +10,6 @@ const theme = extendTheme({
     heading: `'Circular', sans-serif`,
     body: `'Circular', sans-serif`,
   },
-  styles: {
-    global: {
-      body: {
-        bg: "gray.900",
-      },
-    },
-  },
   colors: {
     gradient: {
       xl_primary:

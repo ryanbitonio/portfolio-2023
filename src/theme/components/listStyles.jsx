@@ -7,10 +7,7 @@ const { definePartsStyle, defineMultiStyleConfig } =
 const sizes = {
   lg: definePartsStyle({
     container: {},
-    item: {
-      fontWeight: "semibold",
-      // color: "gray.300",
-    },
+    item: {},
     icon: {
       mr: 5,
     },
