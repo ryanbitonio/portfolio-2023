@@ -12,7 +12,7 @@ import {
 
 const ProjectCard = ({
   title,
-  description,
+  year,
   backgroundImage,
   language,
   alt,
@@ -73,7 +73,7 @@ const ProjectCard = ({
                 lineHeight="18px"
                 color={secondaryColor}
               >
-                {description}
+                {year}
               </Text>
             </Show>
           </CardBody>

@@ -1,4 +1,5 @@
 import "./App.css";
+import Experience from "./components/Experience";
 import Home from "./components/Home";
 import { useColorModeValue } from "@chakra-ui/react";
 
@@ -16,16 +17,19 @@ const App = () => {
   const navColor = useColorModeValue("gray.600", "gray.100");
 
   return (
-    <Home
-      bg={bg}
-      secondaryBg={secondaryBg}
-      tertiaryBg={tertiaryBg}
-      heroBg={heroBg}
-      color={color}
-      secondaryColor={secondaryColor}
-      tertiaryColor={tertiaryColor}
-      navColor={navColor}
-    ></Home>
+    <>
+      <Home
+        bg={bg}
+        secondaryBg={secondaryBg}
+        tertiaryBg={tertiaryBg}
+        heroBg={heroBg}
+        color={color}
+        secondaryColor={secondaryColor}
+        tertiaryColor={tertiaryColor}
+        navColor={navColor}
+      ></Home>
+      <Experience secondaryColor={secondaryColor}></Experience>
+    </>
   );
 };
 

@@ -14,13 +14,13 @@ const ExperienceGrid = ({ color, secondaryColor, title }) => {
         gridTemplateColumns="repeat(auto-fill, minmax(220px, 1fr))"
         spacing={3}
       >
-        {experiences?.map(({ id, title, description, thumbnail }) => (
+        {experiences?.map(({ id, title, year, thumbnail }) => (
           <ProjectCard
             color={color}
             secondaryColor={secondaryColor}
             key={id}
             title={title}
-            description={description}
+            year={year}
             backgroundImage={thumbnail}
           />
         ))}
