@@ -20,7 +20,7 @@ const ExperienceGrid = ({ color, secondaryColor, title }) => {
             secondaryColor={secondaryColor}
             key={id}
             title={title}
-            year={year}
+            description={year}
             backgroundImage={thumbnail}
           />
         ))}

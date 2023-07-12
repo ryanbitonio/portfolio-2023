@@ -28,7 +28,6 @@ const App = () => {
         tertiaryColor={tertiaryColor}
         navColor={navColor}
       ></Home>
-      <Experience secondaryColor={secondaryColor}></Experience>
     </>
   );
 };
