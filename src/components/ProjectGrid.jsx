@@ -10,7 +10,7 @@ import useProjects from "../hooks/useProjects";
 import ProjectCard from "./ProjectCard";
 import ProjectCardSkeleton from "./ProjectCardSkeleton";
 
-const ProjectGrid = ({ color, secondaryColor }) => {
+const ProjectGrid = ({ color, secondaryColor, title }) => {
   const { data: projects, error, isLoading } = useProjects();
   const skeletons = [...Array(11).keys()].map(i => i + 1);
 
@@ -26,10 +26,9 @@ const ProjectGrid = ({ color, secondaryColor }) => {
     <Flex direction="column" align={{ base: "space-around", md: "default" }}>
       <HStack pb={5}>
         <Text fontWeight="semibold" fontSize="5xl" letterSpacing="tight">
-          Featured Projects Today
+          {title}
         </Text>
       </HStack>
-
       <SimpleGrid
         // gridTemplateColumns="repeat(auto-fit, minmax(195px, 1fr))"
         gridTemplateColumns={{

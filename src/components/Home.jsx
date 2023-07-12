@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import Hero from "./Hero";
 import Nav from "./Nav";
 import ProjectGrid from "./ProjectGrid";
+import ExperienceGrid from "./ExperienceGrid";
 
 const Home = ({
   color,
@@ -71,8 +72,19 @@ const Home = ({
           <Box p={6} bg={heroBg}>
             <Hero tertiaryColor={tertiaryColor} />
           </Box>
-          <Box p={6}>
-            <ProjectGrid color={color} secondaryColor={secondaryColor} />
+          <Box px={6} py={10}>
+            <ProjectGrid
+              title="Featured Projects Today"
+              color={color}
+              secondaryColor={secondaryColor}
+            />
+            <Box py={10}>
+              <ExperienceGrid
+                title="Your Past Experiences"
+                color={color}
+                secondaryColor={secondaryColor}
+              />
+            </Box>
           </Box>
         </Stack>
       </GridItem>

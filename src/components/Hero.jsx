@@ -11,6 +11,7 @@ import NavButtons from "./NavButtons";
 import Social from "./Social";
 import Menu from "./Menu";
 import ColorSwitch from "./ColorSwitch";
+import heroImage from "../assets/icons/Hero/hero.svg";
 
 const Hero = ({ tertiaryColor }) => {
   return (
@@ -38,7 +39,7 @@ const Hero = ({ tertiaryColor }) => {
           mb={{ base: "3", md: "0" }}
           boxSize={`clamp(160px, 18vw, 235px)`}
           // filter="drop-shadow(0px 20px 85px rgba(0, 0, 0, 0.6))"
-          src="src/assets/icons/Hero/hero.svg"
+          src={heroImage}
         />
         <Stack pl={{ base: "0", md: "5" }}>
           <Show above="md">
