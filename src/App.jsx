@@ -1,5 +1,5 @@
 import "./App.css";
-import Experience from "./components/Experience";
+
 import Home from "./components/Home";
 import { useColorModeValue } from "@chakra-ui/react";
 

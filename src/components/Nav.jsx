@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import menuList from "../../data/menu";
+import { NavLink } from "react-router-dom";
 
 const Nav = ({ spacing, fontSize, tertiaryColor, navColor }) => {
   const [selectedMenu, setSelectedMenu] = useState(1);
@@ -21,7 +22,7 @@ const Nav = ({ spacing, fontSize, tertiaryColor, navColor }) => {
 
   return (
     <List size="lg" spacing={spacing} color={tertiaryColor}>
-      {menuList.map(({ id, title, icon, activeIcon }, index) => (
+      {menuList.map(({ id, title, icon, activeIcon, path }, index) => (
         <ListItem
           fontWeight="700"
           fontSize={fontSize}
@@ -33,6 +34,7 @@ const Nav = ({ spacing, fontSize, tertiaryColor, navColor }) => {
           {isMobile ? (
             <Center>
               <Link
+                to={path}
                 display="flex"
                 alignItems="center"
                 color={selectedMenu === id ? navColor : "default"}
@@ -52,6 +54,8 @@ const Nav = ({ spacing, fontSize, tertiaryColor, navColor }) => {
             </Center>
           ) : (
             <Link
+              as={NavLink}
+              to={path}
               display="flex"
               alignItems="center"
               color={selectedMenu === id ? navColor : "default"}

@@ -8,6 +8,8 @@ import {
   Button,
   Image,
   Box,
+  Flex,
+  Divider,
 } from "@chakra-ui/react";
 import NavButtons from "./NavButtons";
 import ExpMedgrocer from "../assets/thumbnails/Experience/exp-medgrocer.svg";
@@ -26,99 +28,103 @@ const Experience = ({ secondaryColor }) => {
   );
 
   return (
-    <Stack gap={28} h="100vh" align="center" justify="center" w="60%" m="auto">
+    <Box
+      bg={
+        "radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)"
+      }
+    >
       {filteredExperiences.map(({ id, title, status, description }) => (
-        <Stack key={id}>
-          <HStack>
-            <Stack w="55%" mr="auto" h="100%" justify="space-between">
-              <NavButtons />
-              <Stack>
-                <Heading fontSize="7xl">{title}</Heading>
-                <Text
-                  pb={{ base: "1", md: "0" }}
-                  fontSize={{ base: "md", md: "xl" }}
-                  letterSpacing="wide"
-                  fontWeight="bold"
-                >
-                  {status}
-                </Text>
-              </Stack>
+        <HStack h="100vh" w="60%" m="auto" key={id}>
+          <Stack mr={6} h="100%" justify="center" gap={8}>
+            <Button
+              justifySelf="flex-start"
+              fontWeight="600"
+              fontSize="2xl"
+              w="max-content"
+              variant="outline"
+            >
+              Back to Home
+            </Button>
+            <Stack gap={0}>
+              <Heading fontSize="7xl">{title}</Heading>
               <Text
-                fontSize="4xl"
-                fontWeight="300"
-                lineHeight="24px"
-                color={secondaryColor}
+                pb={{ base: "1", md: "0" }}
+                fontSize={{ base: "md", md: "xl" }}
+                letterSpacing="wide"
+                fontWeight="bold"
               >
-                {description}
+                {status}
               </Text>
-              {filteredExperiences.map(
-                ({ id, tags: { location, role, output } }) => (
-                  <HStack key={id}>
-                    <Tag
-                      size="lg"
-                      borderRadius="full"
-                      variant="solid"
-                      letterSpacing="wide"
-                      fontWeight="bold"
-                    >
-                      <TagLabel fontSize="xl">{location}</TagLabel>
-                    </Tag>
-                    <Tag
-                      size="lg"
-                      borderRadius="full"
-                      variant="solid"
-                      letterSpacing="wide"
-                      fontWeight="bold"
-                    >
-                      <TagLabel fontSize="xl">{role}</TagLabel>
-                    </Tag>
-                    <Tag
-                      size="lg"
-                      borderRadius="full"
-                      variant="solid"
-                      letterSpacing="wide"
-                      fontWeight="bold"
-                    >
-                      <TagLabel fontSize="xl">{output}</TagLabel>
-                    </Tag>
-                  </HStack>
-                )
-              )}
-
+            </Stack>
+            <Text
+              w="70%"
+              fontSize="4xl"
+              fontWeight="300"
+              lineHeight="25px"
+              color={secondaryColor}
+              noOfLines={5}
+            >
+              {description}
+            </Text>
+            <Divider width="61.5%" />
+            {filteredExperiences.map(
+              ({ id, tags: { location, role, output } }) => (
+                <HStack key={id}>
+                  <Tag
+                    size="lg"
+                    borderRadius="full"
+                    variant="solid"
+                    letterSpacing="wide"
+                    fontWeight="bold"
+                  >
+                    <TagLabel fontSize="xl">{location}</TagLabel>
+                  </Tag>
+                  <Tag
+                    size="lg"
+                    borderRadius="full"
+                    variant="solid"
+                    letterSpacing="wide"
+                    fontWeight="bold"
+                  >
+                    <TagLabel fontSize="xl">{role}</TagLabel>
+                  </Tag>
+                  <Tag
+                    size="lg"
+                    borderRadius="full"
+                    variant="solid"
+                    letterSpacing="wide"
+                    fontWeight="bold"
+                  >
+                    <TagLabel fontSize="xl">{output}</TagLabel>
+                  </Tag>
+                </HStack>
+              )
+            )}
+          </Stack>
+          <HStack flexDir="column" align="stretch" gap={6}>
+            {experiences.map(({ id, title, date }) => (
               <Button
-                fontWeight="600"
-                fontSize="2xl"
-                w="max-content"
+                py={8}
+                px={12}
+                border="1px solid #ffffffb2"
+                key={id}
                 variant="outline"
+                onClick={() => handleButtonClick(id)}
               >
-                Back to Home
+                <Stack gap={1}>
+                  <Heading fontWeight="400" fontSize="4xl">
+                    {title}
+                  </Heading>
+                  <Text fontWeight="300" fontSize="xl">
+                    {date}
+                  </Text>
+                </Stack>
               </Button>
-            </Stack>
-            <Image src={ExpMedgrocer} />
+            ))}
           </HStack>
-        </Stack>
+        </HStack>
       ))}
-      <HStack w="100%" gap={6}>
-        {experiences.map(({ id, title, date }) => (
-          <Button
-            border="1px solid white"
-            key={id}
-            py={8}
-            variant="outline"
-            onClick={() => handleButtonClick(id)}
-          >
-            <Stack gap={0} align="flex-start">
-              <Heading fontWeight="400" fontSize="4xl">
-                {title}
-              </Heading>
-              <Text fontWeight="300" fontSize="3xl">
-                {date}
-              </Text>
-            </Stack>
-          </Button>
-        ))}
-      </HStack>
-    </Stack>
+    </Box>
   );
 };
 

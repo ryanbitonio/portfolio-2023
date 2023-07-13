@@ -8,17 +8,20 @@ export default [
     title: "Home",
     icon: GoHome,
     activeIcon: GoHomeFill,
+    path: "/",
   },
   {
     id: 2,
     title: "Experience",
     icon: RiHeadphoneLine,
     activeIcon: RiHeadphoneFill,
+    path: "/experience",
   },
   {
     id: 3,
     title: "Connect",
     icon: BiDisc,
     activeIcon: BiSolidDisc,
+    path: "/connect",
   },
 ];
