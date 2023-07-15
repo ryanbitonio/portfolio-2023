@@ -8,6 +8,7 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import { HiOutlineMail } from "react-icons/hi";
+import CustomModal from "./Modal";
 
 const Connect = ({ color }) => {
   const { colorMode } = useColorMode();
@@ -26,18 +27,15 @@ const Connect = ({ color }) => {
             Feel free to reach out.
           </Text>
         </Stack>
-        <Button
+
+        <CustomModal
+          label="Email"
           variant="outline"
-          _hover={{
-            bg: hoverColor,
-          }}
           aria-label="Send email"
           size="lg"
           fontSize="4xl"
           leftIcon={<HiOutlineMail />}
-        >
-          Email
-        </Button>
+        />
       </Stack>
     </Box>
   );
