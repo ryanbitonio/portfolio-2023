@@ -12,13 +12,6 @@ export default [
   },
   {
     id: 2,
-    title: "Experience",
-    icon: RiHeadphoneLine,
-    activeIcon: RiHeadphoneFill,
-    path: "/experience",
-  },
-  {
-    id: 3,
     title: "Connect",
     icon: BiDisc,
     activeIcon: BiSolidDisc,

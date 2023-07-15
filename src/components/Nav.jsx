@@ -34,6 +34,7 @@ const Nav = ({ spacing, fontSize, tertiaryColor, navColor }) => {
           {isMobile ? (
             <Center>
               <Link
+                as={NavLink}
                 to={path}
                 display="flex"
                 alignItems="center"
