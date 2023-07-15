@@ -6,6 +6,7 @@ import Hero from "./Hero";
 import Nav from "./Nav";
 import ProjectGrid from "./ProjectGrid";
 import ExperienceGrid from "./ExperienceGrid";
+import Connect from "./Connect";
 
 const Home = ({
   color,
@@ -84,6 +85,9 @@ const Home = ({
                 color={color}
                 secondaryColor={secondaryColor}
               />
+            </Box>
+            <Box>
+              <Connect color={color} secondaryColor={secondaryColor} />
             </Box>
           </Box>
         </Stack>
