@@ -29,6 +29,7 @@ const Connect = ({ color }) => {
         </Stack>
 
         <CustomModal
+          title="Send me a message"
           label="Email"
           variant="outline"
           aria-label="Send email"

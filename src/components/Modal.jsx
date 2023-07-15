@@ -10,6 +10,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import ConnectForm from "./ConnectForm";
 
 const CustomModal = ({
   variant,
@@ -43,15 +44,14 @@ const CustomModal = ({
         {label}
       </Button>
 
-      <Modal isCentered isOpen={isOpen} onClose={onClose}>
+      <Modal size="xl" isCentered isOpen={isOpen} onClose={onClose}>
         {overlay}
         <ModalContent>
-          <ModalHeader>{title}</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody></ModalBody>
-          <ModalFooter>
-            <Button onClick={onClose}>Close</Button>
-          </ModalFooter>
+          <ModalHeader fontSize="5xl">{title}</ModalHeader>
+          <ModalCloseButton fontSize="md" />
+          <ModalBody>
+            <ConnectForm />
+          </ModalBody>
         </ModalContent>
       </Modal>
     </>
