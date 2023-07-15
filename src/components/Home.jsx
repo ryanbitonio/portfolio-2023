@@ -87,7 +87,7 @@ const Home = ({
               />
             </Box>
             <Box>
-              <Connect color={color} secondaryColor={secondaryColor} />
+              <Connect color={color} />
             </Box>
           </Box>
         </Stack>
