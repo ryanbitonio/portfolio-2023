@@ -44,10 +44,12 @@ const CustomModal = ({
         {label}
       </Button>
 
-      <Modal size="xl" isCentered isOpen={isOpen} onClose={onClose}>
+      <Modal size="lg" isCentered isOpen={isOpen} onClose={onClose}>
         {overlay}
         <ModalContent>
-          <ModalHeader fontSize="5xl">{title}</ModalHeader>
+          <ModalHeader py={6} fontSize="5xl">
+            {title}
+          </ModalHeader>
           <ModalCloseButton fontSize="md" />
           <ModalBody>
             <ConnectForm />

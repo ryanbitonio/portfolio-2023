@@ -1,18 +1,8 @@
-import {
-  Heading,
-  Stack,
-  Text,
-  IconButton,
-  Box,
-  Button,
-  useColorMode,
-} from "@chakra-ui/react";
+import { Heading, Stack, Text, Box } from "@chakra-ui/react";
 import { HiOutlineMail } from "react-icons/hi";
 import CustomModal from "./Modal";
 
 const Connect = ({ color }) => {
-  const { colorMode } = useColorMode();
-  const hoverColor = colorMode === "dark" ? "gray.500" : "#fcfcfc";
   return (
     <Box>
       <Stack gap={20} color={color} h="82vh" align="center" justify="center">
