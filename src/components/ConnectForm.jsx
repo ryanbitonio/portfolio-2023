@@ -37,7 +37,7 @@ const schema = z.object({
     .max(1000, { message: "Message must be 1000 characters only" }),
 });
 
-const ConnectForm = ({ onSubmit }) => {
+const ConnectForm = () => {
   const {
     register,
     handleSubmit,
@@ -45,13 +45,14 @@ const ConnectForm = ({ onSubmit }) => {
   } = useForm({ resolver: zodResolver(schema) });
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form autoComplete="off">
       <FormControl pb={4}>
         <Box mb={3}>
           <FormLabel fontSize="3xl" htmlFor="name">
             Name
           </FormLabel>
           <Input
+            autoComplete="off"
             fontSize="3xl"
             {...register("name")}
             name="name"
@@ -69,6 +70,7 @@ const ConnectForm = ({ onSubmit }) => {
             Email
           </FormLabel>
           <Input
+            autoComplete="off"
             fontSize="3xl"
             {...register("email")}
             name="email"
@@ -86,6 +88,7 @@ const ConnectForm = ({ onSubmit }) => {
             Subject
           </FormLabel>
           <Input
+            autoComplete="off"
             fontSize="3xl"
             {...register("subject")}
             name="subject"
@@ -103,6 +106,7 @@ const ConnectForm = ({ onSubmit }) => {
             Message
           </FormLabel>
           <Textarea
+            autoComplete="off"
             resize="none"
             fontSize="3xl"
             {...register("message")}
