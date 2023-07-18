@@ -50,10 +50,6 @@ const Aside = ({ color, secondaryColor, tertiaryBg }) => {
               exit={{ opacity: 0 }}
               as={motion.div}
               layout
-              _hover={{
-                bg: hoverColor,
-                cursor: "pointer",
-              }}
               spacing={5}
               mb={2}
             >
