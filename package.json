@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "email": "email dev --port 3001 --dir src/emails",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
@@ -17,7 +16,6 @@
     "@emotion/styled": "^11.11.0",
     "@fontsource/inter": "^5.0.3",
     "@hookform/resolvers": "^3.1.1",
-    "@react-email/components": "^0.0.7",
     "@tanstack/react-query": "^4.29.15",
     "@tanstack/react-query-devtools": "^4.29.19",
     "axios": "^1.4.0",
@@ -26,11 +24,9 @@
     "json-server": "^0.17.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-email": "^1.9.4",
     "react-hook-form": "^7.45.1",
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.14.1",
-    "resend": "^0.17.1",
     "vite-plugin-svgr": "^3.2.0",
     "zod": "^3.21.4"
   },

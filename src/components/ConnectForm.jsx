@@ -41,7 +41,7 @@ const ConnectForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm({ resolver: zodResolver(schema) });
 
   return (
@@ -121,7 +121,13 @@ const ConnectForm = () => {
             </Text>
           )}
         </Box>
-        <Button mb={3} w="100%" fontSize="2xl" type="submit">
+        <Button
+          isDisabled={!isValid}
+          mb={3}
+          w="100%"
+          fontSize="2xl"
+          type="submit"
+        >
           Submit
         </Button>
       </FormControl>
