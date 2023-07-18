@@ -7,11 +7,11 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import heroImage from "../assets/icons/Hero/hero.svg";
+import ColorSwitch from "./ColorSwitch";
+import Menu from "./Menu";
 import NavButtons from "./NavButtons";
 import Social from "./Social";
-import Menu from "./Menu";
-import ColorSwitch from "./ColorSwitch";
-import heroImage from "../assets/icons/Hero/hero.svg";
 
 const Hero = ({ tertiaryColor }) => {
   return (

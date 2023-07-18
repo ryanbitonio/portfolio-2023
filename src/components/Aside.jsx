@@ -9,11 +9,11 @@ import {
   Text,
   useColorMode,
 } from "@chakra-ui/react";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { RiAppsLine } from "react-icons/ri";
 import courses from "../../data/courses";
 import Search from "./Search";
-import { motion, AnimatePresence } from "framer-motion";
 
 const Aside = ({ color, secondaryColor, tertiaryBg }) => {
   const { colorMode } = useColorMode();

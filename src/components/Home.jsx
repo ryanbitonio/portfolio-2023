@@ -1,12 +1,12 @@
-import { Grid, GridItem, Show, Stack, Box } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Show, Stack } from "@chakra-ui/react";
 import { useState } from "react";
 import Aside from "./Aside";
+import Connect from "./Connect";
+import ExperienceGrid from "./ExperienceGrid";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import Nav from "./Nav";
 import ProjectGrid from "./ProjectGrid";
-import ExperienceGrid from "./ExperienceGrid";
-import Connect from "./Connect";
 
 const Home = ({
   color,

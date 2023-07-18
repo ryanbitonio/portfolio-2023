@@ -1,6 +1,6 @@
 import { Flex, HStack, SimpleGrid, Text } from "@chakra-ui/react";
-import ProjectCard from "./ProjectCard";
 import experiences from "../../data/experience";
+import ProjectCard from "./ProjectCard";
 
 const ExperienceGrid = ({ color, secondaryColor, title }) => {
   return (

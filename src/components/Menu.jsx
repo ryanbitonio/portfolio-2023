@@ -1,12 +1,13 @@
-import { Box, IconButton, useDisclosure } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import {
   Drawer,
   DrawerBody,
-  DrawerOverlay,
-  DrawerContent,
   DrawerCloseButton,
+  DrawerContent,
+  DrawerOverlay,
   Flex,
+  IconButton,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import Nav from "./Nav";

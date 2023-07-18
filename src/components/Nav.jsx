@@ -1,16 +1,16 @@
 import {
+  Center,
+  Hide,
   Link,
   List,
   ListIcon,
   ListItem,
-  Hide,
-  Center,
   useBreakpointValue,
   useColorMode,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import menuList from "../../data/menu";
 import { NavLink } from "react-router-dom";
+import menuList from "../../data/menu";
 
 const Nav = ({ spacing, fontSize, tertiaryColor, navColor }) => {
   const [selectedMenu, setSelectedMenu] = useState(1);

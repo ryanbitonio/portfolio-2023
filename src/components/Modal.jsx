@@ -1,13 +1,12 @@
 import {
+  Button,
   Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
+  ModalContent,
+  ModalHeader,
+  ModalOverlay,
   useDisclosure,
-  Button,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import ConnectForm from "./ConnectForm";

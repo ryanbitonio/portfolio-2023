@@ -3,7 +3,7 @@ import { ReactComponent as ConnectIcon } from "../assets/icons/Nav/connect.svg";
 import { ReactComponent as ExperienceIcon } from "../assets/icons/Nav/experience.svg";
 import { ReactComponent as HomeIcon } from "../assets/icons/Nav/home.svg";
 
-const Nav = ({ isSidebarOpen }) => {
+const Nav = () => {
   return (
     <List size="lg" spacing={3}>
       <ListItem>

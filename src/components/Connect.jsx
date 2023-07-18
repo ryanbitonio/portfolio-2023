@@ -1,4 +1,4 @@
-import { Heading, Stack, Text, Box } from "@chakra-ui/react";
+import { Box, Heading, Stack, Text } from "@chakra-ui/react";
 import { HiOutlineMail } from "react-icons/hi";
 import CustomModal from "./Modal";
 
