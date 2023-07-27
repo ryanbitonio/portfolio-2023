@@ -9,7 +9,6 @@ import {
 } from "@chakra-ui/react";
 import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
