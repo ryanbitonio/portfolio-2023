@@ -1,16 +1,20 @@
 import {
+  AbsoluteCenter,
   Button,
   Modal,
   ModalCloseButton,
   ModalContent,
+  Spinner,
   useColorMode,
   useDisclosure,
 } from "@chakra-ui/react";
+import { useState } from "react";
 import { PiPlayCircleFill } from "react-icons/pi";
 
 const Reel = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode } = useColorMode();
+  const [isLoading, setLoading] = useState(true);
 
   return (
     <>
@@ -43,7 +47,14 @@ const Reel = () => {
             bg="gray.700"
             color="white"
           />
+
+          {isLoading && (
+            <AbsoluteCenter>
+              <Spinner size="xl" />
+            </AbsoluteCenter>
+          )}
           <video
+            onCanPlay={() => setLoading(false)}
             onEnded={() => onClose()}
             autoPlay
             style={{
