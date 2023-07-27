@@ -14,7 +14,7 @@ const ExperienceGrid = ({ color, secondaryColor, title }) => {
         gridTemplateColumns="repeat(auto-fill, minmax(220px, 1fr))"
         spacing={3}
       >
-        {experiences?.map(({ id, title, year, thumbnail }) => (
+        {experiences?.map(({ id, title, year, thumbnail, url }) => (
           <ProjectCard
             color={color}
             secondaryColor={secondaryColor}
@@ -22,6 +22,7 @@ const ExperienceGrid = ({ color, secondaryColor, title }) => {
             title={title}
             description={year}
             backgroundImage={thumbnail}
+            url={url}
           />
         ))}
       </SimpleGrid>

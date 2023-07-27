@@ -32,7 +32,6 @@ const ProjectCard = ({
         direction={{ base: "row", md: "column" }}
         align={{ base: "center", md: "flex-start" }}
         overflow="hidden"
-        // maxW={{ base: "100%", md: "249" }}
         _hover={{
           cursor: "pointer",
           boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
