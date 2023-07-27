@@ -51,7 +51,7 @@ const CustomModal = ({
           </ModalHeader>
           <ModalCloseButton fontSize="md" />
           <ModalBody>
-            <ConnectForm />
+            <ConnectForm onClose={onClose} />
           </ModalBody>
         </ModalContent>
       </Modal>

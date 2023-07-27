@@ -7,7 +7,9 @@ import {
   Text,
   Textarea,
 } from "@chakra-ui/react";
+import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -37,15 +39,34 @@ const schema = z.object({
     .max(1000, { message: "Message must be 1000 characters only" }),
 });
 
-const ConnectForm = () => {
+const ConnectForm = ({ onClose }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm({ resolver: zodResolver(schema) });
 
+  const sendEmail = data => {
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAIL_ID,
+        import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+        data,
+        import.meta.env.VITE_EMAIL_PUBLIC_KEY
+      )
+      .then(
+        result => {
+          console.log(result.text);
+          onClose();
+        },
+        error => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
-    <form autoComplete="off">
+    <form onSubmit={handleSubmit(sendEmail)} autoComplete="off">
       <FormControl pb={4}>
         <Box mb={3}>
           <FormLabel fontSize="3xl" htmlFor="name">
@@ -121,13 +142,7 @@ const ConnectForm = () => {
             </Text>
           )}
         </Box>
-        <Button
-          isDisabled={!isValid}
-          mb={3}
-          w="100%"
-          fontSize="2xl"
-          type="submit"
-        >
+        <Button mb={3} w="100%" fontSize="2xl" type="submit">
           Submit
         </Button>
       </FormControl>
