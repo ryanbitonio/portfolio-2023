@@ -24,7 +24,6 @@ const Connect = () => {
             Feel free to reach out.
           </Text>
         </Stack>
-
         <CustomModal
           title="Send me a message"
           label="Email"

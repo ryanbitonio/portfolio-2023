@@ -4,11 +4,13 @@ import {
   FormControl,
   FormLabel,
   Input,
+  Spinner,
   Text,
   Textarea,
 } from "@chakra-ui/react";
 import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -45,7 +47,10 @@ const ConnectForm = ({ onClose }) => {
     formState: { errors },
   } = useForm({ resolver: zodResolver(schema) });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const sendEmail = data => {
+    setIsSubmitting(true);
     emailjs
       .send(
         import.meta.env.VITE_EMAIL_ID,
@@ -57,6 +62,7 @@ const ConnectForm = ({ onClose }) => {
         result => {
           console.log(result.text);
           onClose();
+          setIsSubmitting(false);
         },
         error => {
           console.log(error.text);
@@ -141,8 +147,14 @@ const ConnectForm = ({ onClose }) => {
             </Text>
           )}
         </Box>
-        <Button mb={3} w="100%" fontSize="2xl" type="submit">
-          Submit
+        <Button
+          disabled={isSubmitting}
+          mb={3}
+          w="100%"
+          fontSize="2xl"
+          type="submit"
+        >
+          {isSubmitting ? <Spinner size="sm" /> : "Send"}
         </Button>
       </FormControl>
     </form>
