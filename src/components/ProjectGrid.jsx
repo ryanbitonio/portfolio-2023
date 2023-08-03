@@ -6,13 +6,16 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
+import { useContext } from "react";
 import useProjects from "../hooks/useProjects";
+import AppContext from "./AppContext";
 import ProjectCard from "./ProjectCard";
 import ProjectCardSkeleton from "./ProjectCardSkeleton";
 
-const ProjectGrid = ({ color, secondaryColor, title }) => {
+const ProjectGrid = ({ title }) => {
   const { data: projects, error, isLoading } = useProjects();
   const skeletons = [...Array(11).keys()].map(i => i + 1);
+  const { color, secondaryColor } = useContext(AppContext);
 
   if (error)
     return (

@@ -1,8 +1,12 @@
 import { Flex, HStack, SimpleGrid, Text } from "@chakra-ui/react";
+import { useContext } from "react";
 import experiences from "../../data/experience";
+import AppContext from "./AppContext";
 import ProjectCard from "./ProjectCard";
 
-const ExperienceGrid = ({ color, secondaryColor, title }) => {
+const ExperienceGrid = ({ title }) => {
+  const { color, secondaryColor } = useContext(AppContext);
+  AppContext;
   return (
     <Flex direction="column" align={{ base: "space-around", md: "default" }}>
       <HStack pb={5}>

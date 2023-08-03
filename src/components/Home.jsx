@@ -1,5 +1,6 @@
 import { Box, Grid, GridItem, Show, Stack } from "@chakra-ui/react";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import AppContext from "./AppContext";
 import Aside from "./Aside";
 import Connect from "./Connect";
 import ExperienceGrid from "./ExperienceGrid";
@@ -8,17 +9,9 @@ import Hero from "./Hero";
 import Nav from "./Nav";
 import ProjectGrid from "./ProjectGrid";
 
-const Home = ({
-  color,
-  secondaryColor,
-  tertiaryColor,
-  bg,
-  secondaryBg,
-  tertiaryBg,
-  heroBg,
-  navColor,
-}) => {
+const Home = () => {
   const [courseQuery, setCourseQuery] = useState({});
+  const { bg, secondaryBg, color, heroBg } = useContext(AppContext);
 
   return (
     <Grid
@@ -43,11 +36,7 @@ const Home = ({
       <Show above="md">
         <GridItem borderRadius={10} p={6} area="nav" bg={secondaryBg}>
           <Stack h="100%" justify="center">
-            <Nav
-              tertiaryColor={tertiaryColor}
-              navColor={navColor}
-              spacing={3}
-            />
+            <Nav spacing={3} />
           </Stack>
         </GridItem>
         <GridItem
@@ -59,9 +48,6 @@ const Home = ({
           bg={secondaryBg}
         >
           <Aside
-            secondaryBg={secondaryBg}
-            tertiaryBg={tertiaryBg}
-            secondaryColor={secondaryColor}
             onSearch={searchText =>
               setCourseQuery({ ...courseQuery, searchText })
             }
@@ -71,29 +57,21 @@ const Home = ({
       <GridItem overflowY="auto" borderRadius={10} area="main" bg={secondaryBg}>
         <Stack>
           <Box p={6} bg={heroBg}>
-            <Hero tertiaryColor={tertiaryColor} />
+            <Hero />
           </Box>
           <Box px={6} py={10}>
-            <ProjectGrid
-              title="Featured Projects Today"
-              color={color}
-              secondaryColor={secondaryColor}
-            />
+            <ProjectGrid title="Featured Projects Today" />
             <Box py={10}>
-              <ExperienceGrid
-                title="Your Past Experiences"
-                color={color}
-                secondaryColor={secondaryColor}
-              />
+              <ExperienceGrid title="Your Past Experiences" />
             </Box>
             <Box>
-              <Connect color={color} />
+              <Connect />
             </Box>
           </Box>
         </Stack>
       </GridItem>
       <GridItem h="10vh" mt={-1.5} p={6} area="footer" bg={bg}>
-        <Footer color={color} secondaryColor={secondaryColor} />
+        <Footer />
       </GridItem>
     </Grid>
   );

@@ -1,12 +1,14 @@
 import { Flex, HStack, Heading, Image, Show, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { RiHeartFill, RiHeartLine } from "react-icons/ri";
 import ReelThumbnail from "../assets/thumbnails/reel.png";
+import AppContext from "./AppContext";
 import Reel from "./Reel";
 import Toast from "./Toast";
 
-const Footer = ({ color, secondaryColor }) => {
+const Footer = () => {
   const [like, setLike] = useState(false);
+  const { secondaryColor, color } = useContext(AppContext);
 
   const handleLikeClick = () => {
     setLike(!like);

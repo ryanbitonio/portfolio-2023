@@ -1,8 +1,12 @@
 import { Box, Heading, Stack, Text } from "@chakra-ui/react";
+import { useContext } from "react";
 import { HiOutlineMail } from "react-icons/hi";
+import AppContext from "./AppContext";
 import CustomModal from "./Modal";
 
-const Connect = ({ color }) => {
+const Connect = () => {
+  const { color } = useContext(AppContext);
+
   return (
     <Box>
       <Stack gap={20} color={color} h="82vh" align="center" justify="center">

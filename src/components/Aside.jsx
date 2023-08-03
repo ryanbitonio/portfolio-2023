@@ -7,23 +7,21 @@ import {
   Image,
   Stack,
   Text,
-  useColorMode,
 } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { RiAppsLine } from "react-icons/ri";
 import courses from "../../data/courses";
+import AppContext from "./AppContext";
 import Search from "./Search";
 
-const Aside = ({ color, secondaryColor, tertiaryBg }) => {
-  const { colorMode } = useColorMode();
+const Aside = () => {
   const [searchValue, setSearchValue] = useState("");
+  const { tertiaryBg, secondaryColor, color } = useContext(AppContext);
 
   const handleSearchChange = event => {
     setSearchValue(event.target.value);
   };
-
-  const hoverColor = colorMode === "dark" ? "gray.600" : "#ebebeb";
 
   const filteredCourses = courses.filter(course =>
     course.title.toLowerCase().includes(searchValue.toLowerCase())
@@ -34,7 +32,7 @@ const Aside = ({ color, secondaryColor, tertiaryBg }) => {
       <HStack justify="space-between">
         <HStack w="max-content" color={secondaryColor}>
           <Icon boxSize={6} mr={3} as={RiAppsLine} />
-          <Text fontWeight="700">My Library</Text>
+          <Text fontWeight="700">Courses Taken</Text>
         </HStack>
       </HStack>
       <Box pr={6}>

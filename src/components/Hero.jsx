@@ -7,13 +7,17 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { useContext } from "react";
 import heroImage from "../assets/icons/Hero/hero.svg";
+import AppContext from "./AppContext";
 import ColorSwitch from "./ColorSwitch";
 import Menu from "./Menu";
 import NavButtons from "./NavButtons";
 import Social from "./Social";
 
-const Hero = ({ tertiaryColor }) => {
+const Hero = () => {
+  const { tertiaryColor } = useContext(AppContext);
+
   return (
     <Stack>
       <Flex justify="space-between">
